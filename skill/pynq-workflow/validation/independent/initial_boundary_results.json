@@ -1,0 +1,86 @@
+[
+  {
+    "label": "keyboard_interrupt_after_dma_armed",
+    "result": {
+      "interrupt_escaped": true,
+      "run_report_exists": false,
+      "buffers_freed": [
+        false,
+        false
+      ],
+      "quarantined": false,
+      "recv_status": 0,
+      "explanation": "status 0 means receive channel remains running; no halt or quarantine path ran"
+    }
+  },
+  {
+    "label": "malformed_contract_cli",
+    "result": [
+      {
+        "field": "buffers",
+        "exit_code": 2,
+        "report_exists": true,
+        "traceback": false
+      },
+      {
+        "field": "artifacts",
+        "exit_code": 2,
+        "report_exists": true,
+        "traceback": false
+      },
+      {
+        "field": "registers",
+        "exit_code": 2,
+        "report_exists": true,
+        "traceback": false
+      },
+      {
+        "field": "steps",
+        "exit_code": 2,
+        "report_exists": true,
+        "traceback": false
+      }
+    ]
+  },
+  {
+    "label": "unknown_mmio_range",
+    "result": {
+      "accepted": {
+        "name": "mock_loopback",
+        "steps": 2,
+        "buffers": {
+          "a": {
+            "elements": 4,
+            "bytes": 16
+          },
+          "y": {
+            "elements": 4,
+            "bytes": 16
+          }
+        },
+        "hardware_executed": false
+      },
+      "offset": 4294967296,
+      "metadata_has_address_range": false
+    }
+  },
+  {
+    "label": "large_finite_compare",
+    "result": {
+      "passed": false,
+      "elements": 2,
+      "failed_indices": [
+        0,
+        1
+      ],
+      "nonfinite_indices": [],
+      "atol": 0,
+      "rtol": 0,
+      "mae": 1e+308,
+      "rmse": 1e+308,
+      "max_abs": 1e+308,
+      "relative_l2": null,
+      "relative_l2_defined": false
+    }
+  }
+]

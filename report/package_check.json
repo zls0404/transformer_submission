@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-26",
+  "scope": "Engineering package audit, project recreation, RTL recapture, analysis and offline skill tests",
+  "original_archive_sha256": "0f038583e55d5b1d47bd641fef334f2c0ddebb4de6985f65bdd89b8205da17b5",
+  "project_recreation_passed": true,
+  "bf16_gui_projects_created": 15,
+  "bf16_test_cases": 194,
+  "bf16_passed": 179,
+  "bf16_failed": 15,
+  "int8_simd_hold_errors": 4,
+  "int8_iscas_serial_differences": 6,
+  "skill_unit_tests_passed": 17,
+  "figures": 20,
+  "all_functional_checks_passed": false,
+  "physical_board_retested": false,
+  "full_implementation_rerun": false,
+  "known_issues": "report/known_issues.md",
+  "not_supplied_or_not_completed": [
+    "new board-level regression",
+    "complete model deployment and task accuracy",
+    "same-task before/after optimization data",
+    "power measurements",
+    "new skill physical/cross-board reuse",
+    "whole-repository license and public repository URL"
+  ],
+  "note": "Successful capture execution and file integrity do not mean all functional verdicts passed.",
+  "data_layout_verified": true,
+  "original_data_files_preserved": 19,
+  "reference_csv_files": 29,
+  "reference_rows_checked": 340352,
+  "measured_summary_rows": 10
+}

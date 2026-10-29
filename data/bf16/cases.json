@@ -1,0 +1,184 @@
+[
+  {
+    "case_id": 0,
+    "name": "zeros",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 1,
+    "name": "constant_positive",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 2,
+    "name": "constant_negative",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 3,
+    "name": "constant_nonexact",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 4,
+    "name": "mixed_ramp",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 5,
+    "name": "negative_ramp",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 6,
+    "name": "positive_ramp",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 7,
+    "name": "alternating_sign",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 8,
+    "name": "lane_order_pattern",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 9,
+    "name": "first_element_peak",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 10,
+    "name": "last_element_peak",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 11,
+    "name": "tiny_ramp",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 12,
+    "name": "normal_sigma_0.25",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 13,
+    "name": "normal_sigma_1.0",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 14,
+    "name": "normal_sigma_3.0",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 15,
+    "name": "uniform_2",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 16,
+    "name": "uniform_8",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 17,
+    "name": "near_constant_1",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 18,
+    "name": "near_constant_100",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 19,
+    "name": "alternating_16",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 20,
+    "name": "signed_zeros",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 21,
+    "name": "constant_16",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 22,
+    "name": "constant_minus_16",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 23,
+    "name": "asymmetric_lane_ramp",
+    "category": "nominal",
+    "gap": 0,
+    "N": 768
+  },
+  {
+    "case_id": 24,
+    "name": "gap_probe_normal",
+    "category": "protocol_probe",
+    "gap": 1,
+    "N": 768
+  },
+  {
+    "case_id": 25,
+    "name": "extended_range_96",
+    "category": "range_probe",
+    "gap": 0,
+    "N": 768
+  }
+]

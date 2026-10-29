@@ -1,0 +1,1607 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 12-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sat Oct 24 13:06:15 2026
+# Process ID         : 145088
+# Current directory  : C:/Users/lenovo/.codex/.chatgpt-projects/g-p-6ad1df1654ac8191b490a54dd8479efa
+# Command line       : vivado.exe -mode batch -notrace -source combined_work_20261024/build_int8.tcl -log combined_work_20261024/int8_build.log -nojournal
+# Log file           : C:/Users/lenovo/.codex/.chatgpt-projects/g-p-6ad1df1654ac8191b490a54dd8479efa/combined_work_20261024/int8_build.log
+# Journal file       : 
+# Running On         : LAPTOP-Q97KBQQG
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 7945HX with Radeon Graphics        
+# CPU Frequency      : 2495 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 16844 MB
+# Swap memory        : 16106 MB
+# Total Virtual      : 32951 MB
+# Available Virtual  : 7390 MB
+#-----------------------------------------------------------
+source combined_work_20261024/build_int8.tcl -notrace
+ipx::open_core: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 582.203 ; gain = 265.816
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/fpga/pynq/transformer_int8_bf16/src/int8/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/2026.1/Vivado/data/ip'.
+Wrote  : <D:\fpga\pynq\transformer_int8_bf16\build\generated\int8\int8_z2.srcs\sources_1\bd\SYS_SOC\SYS_SOC.bd> 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconstant:1.0 for the IP type xilinx.com:ip:xlconstant:1.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconstant:1.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM' is being assigned into address space '/axi_dma_1/Data_MM2S' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM' is being assigned into address space '/axi_dma_2/Data_S2MM' at <0x0000_0000 [ 512M ]>.
+Slave segment '/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4040_0000 [ 64K ]>.
+Slave segment '/axi_dma_1/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4041_0000 [ 64K ]>.
+Slave segment '/axi_dma_2/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4042_0000 [ 64K ]>.
+Slave segment '/transformer_block_ax_0/s00_axi/reg0' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 4K ]>.
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+WARNING: [BD 41-926] Following properties on interface pin /transformer_block_ax_0/m0_axis have been updated from connected ip, but BD cell '/transformer_block_ax_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	TDATA_NUM_BYTES = 4
+
+Please resolve any mismatches by directly setting properties on BD cell </transformer_block_ax_0> to completely resolve these warnings.
+WARNING: [BD 41-926] Following properties on interface pin /transformer_block_ax_0/s0_axis have been updated from connected ip, but BD cell '/transformer_block_ax_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	TDATA_NUM_BYTES = 16
+
+Please resolve any mismatches by directly setting properties on BD cell </transformer_block_ax_0> to completely resolve these warnings.
+WARNING: [BD 41-926] Following properties on interface pin /transformer_block_ax_0/s1_axis have been updated from connected ip, but BD cell '/transformer_block_ax_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	TDATA_NUM_BYTES = 16
+
+Please resolve any mismatches by directly setting properties on BD cell </transformer_block_ax_0> to completely resolve these warnings.
+Wrote  : <D:\fpga\pynq\transformer_int8_bf16\build\generated\int8\int8_z2.srcs\sources_1\bd\SYS_SOC\SYS_SOC.bd> 
+INFO: [BD 41-1662] The design 'SYS_SOC.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v
+Verilog Output written to : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/sim/SYS_SOC.v
+Verilog Output written to : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/hdl/SYS_SOC_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP1'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP2'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_dwidth_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_dwidth_converter_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_dwidth_converter_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_auto_pc_0/SYS_SOC_axi_interconnect_0_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_hp0/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_hp1/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_hp2/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block transformer_block_ax_0 .
+Exporting to file D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/hw_handoff/SYS_SOC.hwh
+Generated Hardware Definition File D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/SYS_SOC.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/SYS_SOC.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/SYS_SOC_sv.sveo
+generate_target: Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 819.949 ; gain = 48.320
+WARNING: [BD 41-2937] The design that will be created by this Tcl script contains the following user IPs:
+/transformer_block_ax_0
+Please add the following user repository(s):
+d:/fpga/pynq/transformer_int8_bf16/src/int8/ip_repo
+before sourcing this Tcl script or use write_project_tcl.
+INFO: [BD 5-148] Tcl file written out <D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/export_sys_soc.tcl>.
+
+INT8_PROJECT_CREATED=D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.xpr
+[Sat Oct 24 13:07:03 2026] Launched SYS_SOC_axis_dwidth_converter_1_0_synth_1, SYS_SOC_processing_system7_0_0_synth_1, SYS_SOC_axi_dma_0_0_synth_1, SYS_SOC_axi_dma_1_0_synth_1, SYS_SOC_axis_dwidth_converter_0_0_synth_1, SYS_SOC_axis_dwidth_converter_2_0_synth_1, SYS_SOC_axi_dma_2_0_synth_1, SYS_SOC_axi_interconnect_0_imp_xbar_0_synth_1, SYS_SOC_axi_interconnect_0_imp_auto_pc_0_synth_1, SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_synth_1, SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0_synth_1, SYS_SOC_proc_sys_reset_0_0_synth_1, SYS_SOC_transformer_block_ax_0_0_synth_1, SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0_synth_1...
+Run output will be captured here:
+SYS_SOC_axis_dwidth_converter_1_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axis_dwidth_converter_1_0_synth_1/runme.log
+SYS_SOC_processing_system7_0_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_processing_system7_0_0_synth_1/runme.log
+SYS_SOC_axi_dma_0_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axi_dma_0_0_synth_1/runme.log
+SYS_SOC_axi_dma_1_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axi_dma_1_0_synth_1/runme.log
+SYS_SOC_axis_dwidth_converter_0_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axis_dwidth_converter_0_0_synth_1/runme.log
+SYS_SOC_axis_dwidth_converter_2_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axis_dwidth_converter_2_0_synth_1/runme.log
+SYS_SOC_axi_dma_2_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axi_dma_2_0_synth_1/runme.log
+SYS_SOC_axi_interconnect_0_imp_xbar_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axi_interconnect_0_imp_xbar_0_synth_1/runme.log
+SYS_SOC_axi_interconnect_0_imp_auto_pc_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axi_interconnect_0_imp_auto_pc_0_synth_1/runme.log
+SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_synth_1/runme.log
+SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0_synth_1/runme.log
+SYS_SOC_proc_sys_reset_0_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_proc_sys_reset_0_0_synth_1/runme.log
+SYS_SOC_transformer_block_ax_0_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_transformer_block_ax_0_0_synth_1/runme.log
+SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0_synth_1: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0_synth_1/runme.log
+[Sat Oct 24 13:07:04 2026] Launched synth_1...
+Run output will be captured here: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/runme.log
+[Sat Oct 24 13:07:04 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log SYS_SOC_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SYS_SOC_wrapper.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 12-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sat Oct 24 13:10:53 2026
+# Process ID         : 155856
+# Current directory  : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1
+# Command line       : vivado.exe -log SYS_SOC_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SYS_SOC_wrapper.tcl
+# Log file           : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/SYS_SOC_wrapper.vds
+# Journal file       : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-Q97KBQQG
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 7945HX with Radeon Graphics        
+# CPU Frequency      : 2495 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 16844 MB
+# Swap memory        : 16191 MB
+# Total Virtual      : 33036 MB
+# Available Virtual  : 6674 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Sat Oct 24 13:10:53 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source SYS_SOC_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 589.707 ; gain = 273.598
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/fpga/pynq/transformer_int8_bf16/src/int8/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/2026.1/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.srcs/sources_1/bd/SYS_SOC/SYS_SOC.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ SYS_SOC_xlconstant_0_0
+Command: synth_design -top SYS_SOC_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 148436
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1421.930 ; gain = 576.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_wrapper' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/hdl/SYS_SOC_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:13]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_dma_0_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_dma_0_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'SYS_SOC_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:307]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'SYS_SOC_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:307]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'SYS_SOC_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:307]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'SYS_SOC_axi_dma_0_0' has 40 connections declared, but only 37 given [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:307]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_dma_1_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_dma_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_dma_1_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_dma_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'SYS_SOC_axi_dma_1_0' is unconnected for instance 'axi_dma_1' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:345]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'SYS_SOC_axi_dma_1_0' is unconnected for instance 'axi_dma_1' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:345]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'SYS_SOC_axi_dma_1_0' is unconnected for instance 'axi_dma_1' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:345]
+WARNING: [Synth 8-7023] instance 'axi_dma_1' of module 'SYS_SOC_axi_dma_1_0' has 40 connections declared, but only 37 given [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:345]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_dma_2_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_dma_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_dma_2_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_dma_2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'SYS_SOC_axi_dma_2_0' is unconnected for instance 'axi_dma_2' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:383]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'SYS_SOC_axi_dma_2_0' is unconnected for instance 'axi_dma_2' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:383]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'SYS_SOC_axi_dma_2_0' is unconnected for instance 'axi_dma_2' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:383]
+WARNING: [Synth 8-7023] instance 'axi_dma_2' of module 'SYS_SOC_axi_dma_2_0' has 43 connections declared, but only 40 given [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:383]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_0_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:904]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_U1PSA4' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2031]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_U1PSA4' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2031]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1TGMVXR' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2158]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1TGMVXR' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2158]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1F6LCIZ' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2267]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1F6LCIZ' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2267]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_HPGLWO' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2376]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_HPGLWO' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2376]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1TBVNXS' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2775]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_0_imp_auto_pc_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_0_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_0_imp_auto_pc_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_0_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1TBVNXS' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2775]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_0_imp_xbar_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_0_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_0_imp_xbar_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_0_imp_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (12) of module 'SYS_SOC_axi_interconnect_0_imp_xbar_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1554]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (12) of module 'SYS_SOC_axi_interconnect_0_imp_xbar_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1558]
+WARNING: [Synth 8-689] width (4) of port connection 'm_axi_wstrb' does not match port width (16) of module 'SYS_SOC_axi_interconnect_0_imp_xbar_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1570]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_0_0' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:904]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_hp0_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1593]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_NXEDWC' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:3021]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_NXEDWC' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:3021]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_hp0_0' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1593]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_hp1_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1731]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1K0PRUQ' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2642]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1K0PRUQ' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2642]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_hp1_0' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1731]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_hp2_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1869]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1DNP40X' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2485]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1DNP40X' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:2485]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axi_interconnect_hp2_0' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:1869]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axis_dwidth_converter_0_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axis_dwidth_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axis_dwidth_converter_0_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axis_dwidth_converter_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'SYS_SOC_axis_dwidth_converter_0_0' is unconnected for instance 'axis_dwidth_converter_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:653]
+WARNING: [Synth 8-7023] instance 'axis_dwidth_converter_0' of module 'SYS_SOC_axis_dwidth_converter_0_0' has 12 connections declared, but only 11 given [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:653]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axis_dwidth_converter_1_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axis_dwidth_converter_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axis_dwidth_converter_1_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axis_dwidth_converter_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'SYS_SOC_axis_dwidth_converter_1_0' is unconnected for instance 'axis_dwidth_converter_1' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:665]
+WARNING: [Synth 8-7023] instance 'axis_dwidth_converter_1' of module 'SYS_SOC_axis_dwidth_converter_1_0' has 12 connections declared, but only 11 given [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:665]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_axis_dwidth_converter_2_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axis_dwidth_converter_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_axis_dwidth_converter_2_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_axis_dwidth_converter_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_proc_sys_reset_0_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_proc_sys_reset_0_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'SYS_SOC_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:690]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'SYS_SOC_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:690]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'SYS_SOC_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:690]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'SYS_SOC_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:690]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'SYS_SOC_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:690]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_processing_system7_0_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_processing_system7_0_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_AWREADY' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BVALID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WREADY' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BRESP' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_AWREADY' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_BVALID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_WREADY' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_BRESP' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_BID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RCOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_WCOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RACOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_WACOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARREADY' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RLAST' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RVALID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RRESP' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_BID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RID' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RDATA' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RCOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WCOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RACOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WACOUNT' of module 'SYS_SOC_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'SYS_SOC_processing_system7_0_0' has 200 connections declared, but only 167 given [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:697]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_transformer_block_ax_0_0' [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_transformer_block_ax_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_transformer_block_ax_0_0' (0#1) [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/.Xil/Vivado-155856-LAPTOP-Q97KBQQG/realtime/SYS_SOC_transformer_block_ax_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SYS_SOC_xlconstant_0_0' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_xlconstant_0_0/synth/SYS_SOC_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_11_xlconstant' [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_11_xlconstant' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ipshared/ff42/hdl/xlconstant_v1_1_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_xlconstant_0_0' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_xlconstant_0_0/synth/SYS_SOC_xlconstant_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/synth/SYS_SOC.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'SYS_SOC_wrapper' (0#1) [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/hdl/SYS_SOC_wrapper.v:13]
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1DNP40X is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1DNP40X is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module SYS_SOC_axi_interconnect_hp2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module SYS_SOC_axi_interconnect_hp2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1K0PRUQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1K0PRUQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module SYS_SOC_axi_interconnect_hp1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module SYS_SOC_axi_interconnect_hp1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_NXEDWC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_NXEDWC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module SYS_SOC_axi_interconnect_hp0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module SYS_SOC_axi_interconnect_hp0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1TBVNXS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1TBVNXS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m03_couplers_imp_HPGLWO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m03_couplers_imp_HPGLWO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m03_couplers_imp_HPGLWO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m03_couplers_imp_HPGLWO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_1F6LCIZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_1F6LCIZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_1F6LCIZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_1F6LCIZ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_1TGMVXR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_1TGMVXR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_1TGMVXR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_1TGMVXR is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_U1PSA4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_U1PSA4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_U1PSA4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_U1PSA4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1557.410 ; gain = 712.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1557.410 ; gain = 712.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1557.410 ; gain = 712.461
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1557.410 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0_in_context.xdc] for cell 'SYS_SOC_i/processing_system7_0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0_in_context.xdc] for cell 'SYS_SOC_i/processing_system7_0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0_in_context.xdc] for cell 'SYS_SOC_i/axi_dma_0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0_in_context.xdc] for cell 'SYS_SOC_i/axi_dma_0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_0_0_in_context.xdc] for cell 'SYS_SOC_i/axi_dma_1'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_0_0_in_context.xdc] for cell 'SYS_SOC_i/axi_dma_1'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0_in_context.xdc] for cell 'SYS_SOC_i/axi_dma_2'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0_in_context.xdc] for cell 'SYS_SOC_i/axi_dma_2'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_0_0/SYS_SOC_axis_dwidth_converter_0_0/SYS_SOC_axis_dwidth_converter_1_0_in_context.xdc] for cell 'SYS_SOC_i/axis_dwidth_converter_0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_0_0/SYS_SOC_axis_dwidth_converter_0_0/SYS_SOC_axis_dwidth_converter_1_0_in_context.xdc] for cell 'SYS_SOC_i/axis_dwidth_converter_0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_1_0/SYS_SOC_axis_dwidth_converter_1_0/SYS_SOC_axis_dwidth_converter_1_0_in_context.xdc] for cell 'SYS_SOC_i/axis_dwidth_converter_1'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_1_0/SYS_SOC_axis_dwidth_converter_1_0/SYS_SOC_axis_dwidth_converter_1_0_in_context.xdc] for cell 'SYS_SOC_i/axis_dwidth_converter_1'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_2_0/SYS_SOC_axis_dwidth_converter_2_0/SYS_SOC_axis_dwidth_converter_2_0_in_context.xdc] for cell 'SYS_SOC_i/axis_dwidth_converter_2'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_2_0/SYS_SOC_axis_dwidth_converter_2_0/SYS_SOC_axis_dwidth_converter_2_0_in_context.xdc] for cell 'SYS_SOC_i/axis_dwidth_converter_2'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_xbar_0/SYS_SOC_axi_interconnect_0_imp_xbar_0/SYS_SOC_axi_interconnect_0_imp_xbar_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_xbar_0/SYS_SOC_axi_interconnect_0_imp_xbar_0/SYS_SOC_axi_interconnect_0_imp_xbar_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_0/xbar'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_auto_pc_0/SYS_SOC_axi_interconnect_0_imp_auto_pc_0/SYS_SOC_axi_interconnect_0_imp_auto_pc_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_0/s00_couplers/auto_pc'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_auto_pc_0/SYS_SOC_axi_interconnect_0_imp_auto_pc_0/SYS_SOC_axi_interconnect_0_imp_auto_pc_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_0/s00_couplers/auto_pc'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_hp0/s00_couplers/auto_pc'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_hp0/s00_couplers/auto_pc'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_hp1/s00_couplers/auto_pc'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_hp1/s00_couplers/auto_pc'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_hp2/s00_couplers/auto_pc'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0_in_context.xdc] for cell 'SYS_SOC_i/axi_interconnect_hp2/s00_couplers/auto_pc'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0_in_context.xdc] for cell 'SYS_SOC_i/proc_sys_reset_0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0_in_context.xdc] for cell 'SYS_SOC_i/proc_sys_reset_0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_transformer_block_ax_0_0/SYS_SOC_transformer_block_ax_0_0/SYS_SOC_transformer_block_ax_0_0_in_context.xdc] for cell 'SYS_SOC_i/transformer_block_ax_0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_transformer_block_ax_0_0/SYS_SOC_transformer_block_ax_0_0/SYS_SOC_transformer_block_ax_0_0_in_context.xdc] for cell 'SYS_SOC_i/transformer_block_ax_0'
+Parsing XDC File [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1557.410 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1557.410 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1557.410 ; gain = 712.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1557.410 ; gain = 712.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1557.410 ; gain = 712.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1557.410 ; gain = 712.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port ACLK in module SYS_SOC_axi_interconnect_hp2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module SYS_SOC_axi_interconnect_hp2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module SYS_SOC_axi_interconnect_hp2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module SYS_SOC_axi_interconnect_hp2_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module SYS_SOC_axi_interconnect_hp1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module SYS_SOC_axi_interconnect_hp1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module SYS_SOC_axi_interconnect_hp1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module SYS_SOC_axi_interconnect_hp1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module SYS_SOC_axi_interconnect_hp0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESETN in module SYS_SOC_axi_interconnect_hp0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module SYS_SOC_axi_interconnect_hp0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module SYS_SOC_axi_interconnect_hp0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M03_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module SYS_SOC_axi_interconnect_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1589.930 ; gain = 744.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1760.066 ; gain = 915.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1761.711 ; gain = 916.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1772.539 ; gain = 927.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------------------+----------+
+|      |BlackBox name                              |Instances |
++------+-------------------------------------------+----------+
+|1     |SYS_SOC_axi_dma_0_0                        |         1|
+|2     |SYS_SOC_axi_dma_1_0                        |         1|
+|3     |SYS_SOC_axi_dma_2_0                        |         1|
+|4     |SYS_SOC_axi_interconnect_0_imp_xbar_0      |         1|
+|5     |SYS_SOC_axi_interconnect_0_imp_auto_pc_0   |         1|
+|6     |SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0 |         1|
+|7     |SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0 |         1|
+|8     |SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0 |         1|
+|9     |SYS_SOC_axis_dwidth_converter_0_0          |         1|
+|10    |SYS_SOC_axis_dwidth_converter_1_0          |         1|
+|11    |SYS_SOC_axis_dwidth_converter_2_0          |         1|
+|12    |SYS_SOC_proc_sys_reset_0_0                 |         1|
+|13    |SYS_SOC_processing_system7_0_0             |         1|
+|14    |SYS_SOC_transformer_block_ax_0_0           |         1|
++------+-------------------------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------------------+------+
+|      |Cell                                     |Count |
++------+-----------------------------------------+------+
+|1     |SYS_SOC_axi_dma_0                        |     1|
+|2     |SYS_SOC_axi_dma_1                        |     1|
+|3     |SYS_SOC_axi_dma_2                        |     1|
+|4     |SYS_SOC_axi_interconnect_0_imp_auto_pc   |     1|
+|5     |SYS_SOC_axi_interconnect_0_imp_xbar      |     1|
+|6     |SYS_SOC_axi_interconnect_hp0_imp_auto_pc |     1|
+|7     |SYS_SOC_axi_interconnect_hp1_imp_auto_pc |     1|
+|8     |SYS_SOC_axi_interconnect_hp2_imp_auto_pc |     1|
+|9     |SYS_SOC_axis_dwidth_converter_0          |     1|
+|10    |SYS_SOC_axis_dwidth_converter_1          |     1|
+|11    |SYS_SOC_axis_dwidth_converter_2          |     1|
+|12    |SYS_SOC_proc_sys_reset_0                 |     1|
+|13    |SYS_SOC_processing_system7_0             |     1|
+|14    |SYS_SOC_transformer_block_ax_0           |     1|
++------+-----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2046.230 ; gain = 1201.281
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2046.230 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2059.016 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8a9a1208
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+77 Infos, 120 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 2063.020 ; gain = 1442.727
+INFO: [Common 17-1381] The checkpoint 'D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/synth_1/SYS_SOC_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file SYS_SOC_wrapper_utilization_synth.rpt -pb SYS_SOC_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 13:11:34 2026...
+[Sat Oct 24 13:11:37 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:04:33 . Memory (MB): peak = 830.422 ; gain = 0.000
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0.dcp' for cell 'SYS_SOC_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0.dcp' for cell 'SYS_SOC_i/axi_dma_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0.dcp' for cell 'SYS_SOC_i/axi_dma_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_0_0/SYS_SOC_axis_dwidth_converter_0_0.dcp' for cell 'SYS_SOC_i/axis_dwidth_converter_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_1_0/SYS_SOC_axis_dwidth_converter_1_0.dcp' for cell 'SYS_SOC_i/axis_dwidth_converter_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_2_0/SYS_SOC_axis_dwidth_converter_2_0.dcp' for cell 'SYS_SOC_i/axis_dwidth_converter_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0.dcp' for cell 'SYS_SOC_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0.dcp' for cell 'SYS_SOC_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_transformer_block_ax_0_0/SYS_SOC_transformer_block_ax_0_0.dcp' for cell 'SYS_SOC_i/transformer_block_ax_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_xbar_0/SYS_SOC_axi_interconnect_0_imp_xbar_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_auto_pc_0/SYS_SOC_axi_interconnect_0_imp_auto_pc_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_hp0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_hp1/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_hp2/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.223 . Memory (MB): peak = 1154.309 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2291 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0.xdc] for cell 'SYS_SOC_i/processing_system7_0/inst'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0.xdc] for cell 'SYS_SOC_i/processing_system7_0/inst'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0.xdc] for cell 'SYS_SOC_i/axi_dma_0/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0.xdc] for cell 'SYS_SOC_i/axi_dma_0/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0.xdc] for cell 'SYS_SOC_i/axi_dma_1/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0.xdc] for cell 'SYS_SOC_i/axi_dma_1/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0.xdc] for cell 'SYS_SOC_i/axi_dma_2/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0.xdc] for cell 'SYS_SOC_i/axi_dma_2/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0_board.xdc] for cell 'SYS_SOC_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0_board.xdc] for cell 'SYS_SOC_i/proc_sys_reset_0/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_0/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_0/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_1/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_1/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_2/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_2/U0'
+INFO: [Project 1-1714] 16 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1900.953 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 54 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 48 instances
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1900.953 ; gain = 1070.531
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INT8_SYNTHESIS_VERIFIED
+[Sat Oct 24 13:11:59 2026] Launched impl_1...
+Run output will be captured here: D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/runme.log
+[Sat Oct 24 13:11:59 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log SYS_SOC_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source SYS_SOC_wrapper.tcl -notrace
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 12-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sat Oct 24 13:12:05 2026
+# Process ID         : 147936
+# Current directory  : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1
+# Command line       : vivado.exe -log SYS_SOC_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SYS_SOC_wrapper.tcl -notrace
+# Log file           : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper.vdi
+# Journal file       : D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1\vivado.jou
+# Running On         : LAPTOP-Q97KBQQG
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 7945HX with Radeon Graphics        
+# CPU Frequency      : 2495 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 16844 MB
+# Swap memory        : 16191 MB
+# Total Virtual      : 33036 MB
+# Available Virtual  : 5362 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Sat Oct 24 13:12:05 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source SYS_SOC_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 591.207 ; gain = 277.465
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/fpga/pynq/transformer_int8_bf16/src/int8/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/2026.1/Vivado/data/ip'.
+Command: link_design -top SYS_SOC_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0.dcp' for cell 'SYS_SOC_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0.dcp' for cell 'SYS_SOC_i/axi_dma_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0.dcp' for cell 'SYS_SOC_i/axi_dma_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_0_0/SYS_SOC_axis_dwidth_converter_0_0.dcp' for cell 'SYS_SOC_i/axis_dwidth_converter_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_1_0/SYS_SOC_axis_dwidth_converter_1_0.dcp' for cell 'SYS_SOC_i/axis_dwidth_converter_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axis_dwidth_converter_2_0/SYS_SOC_axis_dwidth_converter_2_0.dcp' for cell 'SYS_SOC_i/axis_dwidth_converter_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0.dcp' for cell 'SYS_SOC_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0.dcp' for cell 'SYS_SOC_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_transformer_block_ax_0_0/SYS_SOC_transformer_block_ax_0_0.dcp' for cell 'SYS_SOC_i/transformer_block_ax_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_xbar_0/SYS_SOC_axi_interconnect_0_imp_xbar_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_0_imp_auto_pc_0/SYS_SOC_axi_interconnect_0_imp_auto_pc_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp0_imp_auto_pc_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_hp0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp1_imp_auto_pc_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_hp1/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'd:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0/SYS_SOC_axi_interconnect_hp2_imp_auto_pc_0.dcp' for cell 'SYS_SOC_i/axi_interconnect_hp2/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.222 . Memory (MB): peak = 954.793 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2291 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0.xdc] for cell 'SYS_SOC_i/processing_system7_0/inst'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_processing_system7_0_0/SYS_SOC_processing_system7_0_0.xdc] for cell 'SYS_SOC_i/processing_system7_0/inst'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0.xdc] for cell 'SYS_SOC_i/axi_dma_0/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0.xdc] for cell 'SYS_SOC_i/axi_dma_0/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0.xdc] for cell 'SYS_SOC_i/axi_dma_1/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0.xdc] for cell 'SYS_SOC_i/axi_dma_1/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0.xdc] for cell 'SYS_SOC_i/axi_dma_2/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0.xdc] for cell 'SYS_SOC_i/axi_dma_2/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0_board.xdc] for cell 'SYS_SOC_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_proc_sys_reset_0_0/SYS_SOC_proc_sys_reset_0_0_board.xdc] for cell 'SYS_SOC_i/proc_sys_reset_0/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_0/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_0_0/SYS_SOC_axi_dma_0_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_0/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_1/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_1_0/SYS_SOC_axi_dma_1_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_1/U0'
+Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_2/U0'
+Finished Parsing XDC File [d:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.gen/sources_1/bd/SYS_SOC/ip/SYS_SOC_axi_dma_2_0/SYS_SOC_axi_dma_2_0_clocks.xdc] for cell 'SYS_SOC_i/axi_dma_2/U0'
+INFO: [Project 1-1714] 16 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1707.953 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 54 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 48 instances
+
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1707.953 ; gain = 1087.793
+Command: opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.457 . Memory (MB): peak = 1707.953 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: f1295615
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.953 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: f1295615
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2175.715 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: f1295615
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Phase 1 Initialization | Checksum: f1295615
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2175.715 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: f1295615
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 2175.715 ; gain = 0.000
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: f1295615
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.438 . Memory (MB): peak = 2175.715 ; gain = 0.000
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: f1295615
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.467 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: f1295615
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.469 . Memory (MB): peak = 2175.715 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 2 inverters resulting in an inversion of 21 pins
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 8 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 15d8830b9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Retarget | Checksum: 15d8830b9
+INFO: [Opt 31-389] Phase Retarget created 41 cells and removed 151 cells
+INFO: [Opt 31-1021] In phase Retarget, 36 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 1c45669b7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Constant propagation | Checksum: 1c45669b7
+INFO: [Opt 31-389] Phase Constant propagation created 69 cells and removed 326 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 36 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2175.715 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Phase 5 Sweep | Checksum: 13f3e67aa
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Sweep | Checksum: 13f3e67aa
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 395 cells
+INFO: [Opt 31-1021] In phase Sweep, 131 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 13f3e67aa
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2175.715 ; gain = 0.000
+BUFG optimization | Checksum: 13f3e67aa
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 13f3e67aa
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Shift Register Optimization | Checksum: 13f3e67aa
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 1bc0673b6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Post Processing Netlist | Checksum: 1bc0673b6
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 44 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 169b18fe4
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2175.715 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 169b18fe4
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Phase 9 Finalization | Checksum: 169b18fe4
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2175.715 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              41  |             151  |                                             36  |
+|  Constant propagation         |              69  |             326  |                                             36  |
+|  Sweep                        |               0  |             395  |                                            131  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             44  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 169b18fe4
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2175.715 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 81 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 3 WE to EN ports
+Number of BRAM Ports augmented: 37 newly gated: 7 Total Ports: 162
+Ending PowerOpt Patch Enables Task | Checksum: 1daf65d94
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.310 . Memory (MB): peak = 2203.367 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1daf65d94
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 2203.367 ; gain = 27.652
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 1b19720da
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2243.094 ; gain = 39.727
+Ending Final Cleanup Task | Checksum: 1b19720da
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2243.094 ; gain = 39.727
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+58 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 2243.094 ; gain = 535.141
+INFO: [Vivado 12-24828] Executing command : report_drc -file SYS_SOC_wrapper_drc_opted.rpt -pb SYS_SOC_wrapper_drc_opted.pb -rpx SYS_SOC_wrapper_drc_opted.rpx
+Command: report_drc -file SYS_SOC_wrapper_drc_opted.rpt -pb SYS_SOC_wrapper_drc_opted.pb -rpx SYS_SOC_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 24 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 174de77c1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d9d4ad5c
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 14815144c
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 14815144c
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 14815144c
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1648af5c3
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 198c9c045
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:11 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 198c9c045
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:11 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 1882c88be
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:25 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 17fded7e5
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 920 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 411 nets or LUTs. Breaked 0 LUT, combined 411 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-76] Pass 1. Identified 4 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net SYS_SOC_i/transformer_block_ax_0/inst/U_transformer_block_axi/u_transformer_block_top/u_MM_ultra/F_length[7]. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net SYS_SOC_i/transformer_block_ax_0/inst/U_transformer_block_axi/u_transformer_block_top/u_MM_ultra/F_length[6]. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net SYS_SOC_i/transformer_block_ax_0/inst/U_transformer_block_axi/u_transformer_block_top/u_MM_ultra/F_length[8]. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net SYS_SOC_i/transformer_block_ax_0/inst/U_transformer_block_axi/u_transformer_block_top/u_MM_ultra/F_length[9]. Replicated 3 times.
+INFO: [Physopt 32-232] Optimized 4 nets. Created 13 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 13 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Physopt 32-46] Identified 6 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1402] Pass 1: Identified 16 candidate cells for Shift Register optimization.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 2 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            411  |                   411  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Fanout                                           |           13  |              0  |                     4  |           0  |           1  |  00:00:00  |
+|  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            2  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           15  |            411  |                   416  |           0  |          11  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 110858d47
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:29 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 2.5 Global Place Phase2 | Checksum: 1b057b005
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:30 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1b057b005
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:30 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1a439c4de
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:31 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2086fa7a2
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:34 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 18e9feefb
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:34 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 26e3f98d2
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:34 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 270f8687b
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:37 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 19a126761
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:41 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1c6865b01
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:43 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1647f2de7
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:43 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 1d3c84c74
+
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:46 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1d3c84c74
+
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:46 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1e196caa8
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.137 | TNS=-0.160 |
+Phase 1 Physical Synthesis Initialization | Checksum: 242e83c08
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.282 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Place 46-33] Processed net SYS_SOC_i/transformer_block_ax_0/inst/U_transformer_block_axi/u_transformer_block_top/u_MM_ultra/u_MM_buffer/u_MM/u_PE_array/aresetn_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net SYS_SOC_i/transformer_block_ax_0/inst/U_transformer_block_axi/u_transformer_block_top/u_MM_ultra/u_MM_buffer/u_MM/u_PE_array/array[11].PE_line_u/array_line[15].PE_u/input_feature_valid_reg, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 2 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 2, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1c4ee7a89
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.671 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1e196caa8
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:00:50 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.368. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 13983a237
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:56 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:56 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 13983a237
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:57 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 13983a237
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:57 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                2x2|                2x2|
+|___________|___________________|___________________|
+|      South|                2x2|                2x2|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                2x2|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 13983a237
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:57 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 13983a237
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:57 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:57 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 15a9adbb5
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:57 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Ending Placer Task | Checksum: f2c72033
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:57 . Memory (MB): peak = 2243.094 ; gain = 0.000
+109 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file SYS_SOC_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_io -file SYS_SOC_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file SYS_SOC_wrapper_utilization_placed.rpt -pb SYS_SOC_wrapper_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.078 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.715 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.843 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 0.368 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+120 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.720 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2243.094 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.853 . Memory (MB): peak = 2243.094 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: a921edc1 ConstDB: 0 ShapeSum: 33abbf82 RouteDB: 15f972f0
+Post Restoration Checksum: NetGraph: bf90db07 | NumContArr: 46a3f9aa | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 28b86c9eb
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:17 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 28b86c9eb
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2243.094 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 28b86c9eb
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2243.094 ; gain = 0.000
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1c8255387
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:21 . Memory (MB): peak = 2300.297 ; gain = 57.203
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.314  | TNS=0.000  | WHS=-0.271 | THS=-534.054|
+
+
+Phase 2.4 Soft Constraint Pins - Fast Budgeting
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 19e5cb17a
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:23 . Memory (MB): peak = 2390.715 ; gain = 147.621
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 37475
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 37475
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 1ec74e01c
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:23 . Memory (MB): peak = 2390.715 ; gain = 147.621
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 1ec74e01c
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:23 . Memory (MB): peak = 2390.715 ; gain = 147.621
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 1d29e1e76
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:28 . Memory (MB): peak = 2448.297 ; gain = 205.203
+Phase 4 Initial Routing | Checksum: 1d29e1e76
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:28 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 5212
+ Number of Nodes with overlaps = 1621
+ Number of Nodes with overlaps = 595
+ Number of Nodes with overlaps = 201
+ Number of Nodes with overlaps = 70
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.151  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 27263d1b7
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:49 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.151  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 25d697d89
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:50 . Memory (MB): peak = 2448.297 ; gain = 205.203
+Phase 5 Rip-up And Reroute | Checksum: 25d697d89
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:50 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 29b3e9f83
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:50 . Memory (MB): peak = 2448.297 ; gain = 205.203
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.282  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 6.1 Delay CleanUp | Checksum: 29b3e9f83
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:50 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 29b3e9f83
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:50 . Memory (MB): peak = 2448.297 ; gain = 205.203
+Phase 6 Delay and Skew Optimization | Checksum: 29b3e9f83
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:50 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.282  | TNS=0.000  | WHS=0.019  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 24ef75729
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:00:51 . Memory (MB): peak = 2448.297 ; gain = 205.203
+Phase 7 Post Hold Fix | Checksum: 24ef75729
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:00:51 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 11.9062 %
+  Global Horizontal Routing Utilization  = 11.8011 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 24ef75729
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:51 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 24ef75729
+
+Time (s): cpu = 00:01:22 ; elapsed = 00:00:51 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 18155867c
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:53 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 18155867c
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:53 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.282  | TNS=0.000  | WHS=0.019  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 18155867c
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:53 . Memory (MB): peak = 2448.297 ; gain = 205.203
+Total Elapsed time in route_design: 52.777 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 107a58716
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:53 . Memory (MB): peak = 2448.297 ; gain = 205.203
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 107a58716
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:53 . Memory (MB): peak = 2448.297 ; gain = 205.203
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+133 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:25 ; elapsed = 00:00:53 . Memory (MB): peak = 2448.297 ; gain = 205.203
+INFO: [Vivado 12-24828] Executing command : report_drc -file SYS_SOC_wrapper_drc_routed.rpt -pb SYS_SOC_wrapper_drc_routed.pb -rpx SYS_SOC_wrapper_drc_routed.rpx
+Command: report_drc -file SYS_SOC_wrapper_drc_routed.rpt -pb SYS_SOC_wrapper_drc_routed.pb -rpx SYS_SOC_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file SYS_SOC_wrapper_methodology_drc_routed.rpt -pb SYS_SOC_wrapper_methodology_drc_routed.pb -rpx SYS_SOC_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file SYS_SOC_wrapper_methodology_drc_routed.rpt -pb SYS_SOC_wrapper_methodology_drc_routed.pb -rpx SYS_SOC_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file SYS_SOC_wrapper_timing_summary_routed.rpt -pb SYS_SOC_wrapper_timing_summary_routed.pb -rpx SYS_SOC_wrapper_timing_summary_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Vivado 12-24838] Running report commands "report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file SYS_SOC_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file SYS_SOC_wrapper_route_status.rpt -pb SYS_SOC_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file SYS_SOC_wrapper_power_routed.rpt -pb SYS_SOC_wrapper_power_summary_routed.pb -rpx SYS_SOC_wrapper_power_routed.rpx
+Command: report_power -file SYS_SOC_wrapper_power_routed.rpt -pb SYS_SOC_wrapper_power_summary_routed.pb -rpx SYS_SOC_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+150 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file SYS_SOC_wrapper_clock_utilization_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file SYS_SOC_wrapper_bus_skew_routed.rpt -pb SYS_SOC_wrapper_bus_skew_routed.pb -rpx SYS_SOC_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+generate_parallel_reports: Time (s): cpu = 00:00:33 ; elapsed = 00:00:15 . Memory (MB): peak = 2448.297 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.268 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.698 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2448.297 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper_routed.dcp' has been generated.
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode 
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+INFO: [Vivado_Tcl 4-2280] Estimated Timing Summary | WNS= 0.286 | TNS= 0.000 | WHS= 0.019 |
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-2291] Design worst hold slack (WHS) is greater than or equal to 0.000 ns. Hold fix optimization will be skipped.
+ 
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+164 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -report_unconstrained -warn_on_violation -file SYS_SOC_wrapper_timing_summary_postroute_physopted.rpt -pb SYS_SOC_wrapper_timing_summary_postroute_physopted.pb -rpx SYS_SOC_wrapper_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file SYS_SOC_wrapper_bus_skew_postroute_physopted.rpt -pb SYS_SOC_wrapper_bus_skew_postroute_physopted.pb -rpx SYS_SOC_wrapper_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.079 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.271 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.688 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2448.297 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2448.297 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/fpga/pynq/transformer_int8_bf16/build/generated/int8/int8_z2.runs/impl_1/SYS_SOC_wrapper_postroute_physopt.dcp' has been generated.
+INFO: [Memdata 28-167] Found XPM memory block SYS_SOC_i/axi_dma_2/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the SYS_SOC_i/axi_dma_2/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <SYS_SOC_i/axi_dma_2/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <SYS_SOC_i/axi_dma_2>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <SYS_SOC_i/axi_dma_1/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <SYS_SOC_i/axi_dma_1>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <SYS_SOC_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <SYS_SOC_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force SYS_SOC_wrapper.bit
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Initializing bitstream generation complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.739 . Memory (MB): peak = 2532.254 ; gain = 65.273
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./SYS_SOC_wrapper.bit...
+Generate Bitstream complete. Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2806.797 ; gain = 339.816
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+184 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2806.797 ; gain = 358.500
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 13:15:41 2026...
+[Sat Oct 24 13:15:47 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:03:48 . Memory (MB): peak = 1988.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.202 . Memory (MB): peak = 1988.520 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2275 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1988.520 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1988.520 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1988.520 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1988.520 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.540 . Memory (MB): peak = 2005.809 ; gain = 17.289
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2005.809 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.222 . Memory (MB): peak = 2005.809 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.819 . Memory (MB): peak = 2005.809 ; gain = 17.289
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.821 . Memory (MB): peak = 2005.809 ; gain = 17.289
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2034.332 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 54 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 48 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2034.332 ; gain = 45.812
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: report_drc -file D:/fpga/pynq/transformer_int8_bf16/build/reports/int8/rebuild/drc.rpt
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/fpga/pynq/transformer_int8_bf16/build/reports/int8/rebuild/drc.rpt.
+report_drc completed successfully
+INT8_BITSTREAM_VERIFIED
+BOARD_FILES=D:/fpga/pynq/transformer_int8_bf16/board/int8/rebuilt
+INT8_BUILD_COMPLETE stage=bitstream
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 13:16:04 2026...

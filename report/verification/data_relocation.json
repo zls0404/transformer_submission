@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "original_files": 19,
+  "original_bytes_preserved": true,
+  "canonical_directories": [
+    "data/int8",
+    "data/bf16",
+    "data/board/bf16"
+  ],
+  "reference_csv_files": 29,
+  "golden_output_rows": 340352,
+  "measured_summary_rows": 10,
+  "gui_paths_checked": 15,
+  "int8_testbench_entry_completed": true,
+  "bf16_silu_cases_recaptured": 26,
+  "bf16_pipeline_targeted_case": {
+    "passed": true,
+    "rows": 768,
+    "relative_l2": 0.001536033024635351,
+    "case_id": 2,
+    "op": 11,
+    "input_directory": "data/bf16/integrated",
+    "all_three_hex_frames_consumed": true,
+    "scope": "One nonzero pipeline case after data relocation, not a new full regression or board test"
+  },
+  "full_bf16_regression_repeated_after_move": false,
+  "fix": "Normalize Windows paths before simulator Tcl plusargs",
+  "physical_board_executed": false
+}

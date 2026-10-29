@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "original_data_files": 19,
+  "golden_csv_files_checked": 28,
+  "golden_csv_rows_checked": 340352,
+  "measured_summary_rows": 10,
+  "checks": [
+    {
+      "reference": "softmax",
+      "rows": 14720,
+      "passed": true
+    },
+    {
+      "reference": "gelu",
+      "rows": 3840,
+      "passed": true
+    },
+    {
+      "reference": "gemm",
+      "rows": 6912,
+      "passed": true
+    },
+    {
+      "reference": "standalone_softmax",
+      "rows": 19968,
+      "passed": true
+    },
+    {
+      "reference": "standalone_layernorm",
+      "rows": 19968,
+      "passed": true
+    },
+    {
+      "reference": "standalone_rmsnorm",
+      "rows": 19968,
+      "passed": true
+    },
+    {
+      "reference": "standalone_silu",
+      "rows": 19968,
+      "passed": true
+    },
+    {
+      "reference": "standalone_gelu",
+      "rows": 19968,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_gemm",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_softmax",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_layernorm",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_rmsnorm",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_silu",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_gelu",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_layernorm_affine",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_rmsnorm_affine",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_masked_softmax",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "pipeline_swiglu",
+      "rows": 18432,
+      "passed": true
+    },
+    {
+      "reference": "board_op_0",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_1",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_2",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_3",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_4",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_7",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_8",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_9",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_10",
+      "rows": 3072,
+      "passed": true
+    },
+    {
+      "reference": "board_op_11",
+      "rows": 3072,
+      "passed": true
+    }
+  ],
+  "hardware_executed": false
+}

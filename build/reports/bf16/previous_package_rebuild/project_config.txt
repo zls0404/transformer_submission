@@ -1,0 +1,11 @@
+part=xc7z020clg400-1
+project=D:/fpga/pynq/bf16_transformer/submission_bf16/build/generated/bf16_z2.xpr
+ip_repo=D:/fpga/pynq/bf16_transformer/submission_bf16/src/ip_repo
+M=4
+K=4
+N=768
+fclk0_mhz=100
+dma_a=0x40400000
+dma_b=0x40410000
+dma_out=0x40420000
+snake_acc_axi_0=0x43C00000

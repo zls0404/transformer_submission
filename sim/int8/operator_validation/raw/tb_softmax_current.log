@@ -1,0 +1,119 @@
+﻿
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Mon Oct 26 19:00:01 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_softmax_current/xsim_script.tcl
+# xsim {tb_softmax_current} -testplusarg ROOT=../.. -testplusarg DATA_DIR=D:/fpga/pynq/transformer_submission/data/int8 -wdb {D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/raw/tb_softmax_current.wdb} -autoloadwcfg -tclbatch {D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/scripts/run_wave.tcl}
+Time resolution is 1 ps
+source D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/scripts/run_wave.tcl
+## log_wave -r /
+## run all
+CASE 1 N=32 serial_diff=0 parallel_diff=0
+CASE 2 N=32 serial_diff=0 parallel_diff=0
+CASE 3 N=32 serial_diff=32 parallel_diff=0
+CASE 4 N=32 serial_diff=0 parallel_diff=0
+CASE 5 N=32 serial_diff=32 parallel_diff=0
+CASE 6 N=32 serial_diff=0 parallel_diff=0
+CASE 7 N=32 serial_diff=0 parallel_diff=0
+CASE 8 N=32 serial_diff=0 parallel_diff=0
+CASE 9 N=32 serial_diff=0 parallel_diff=0
+CASE 10 N=32 serial_diff=0 parallel_diff=0
+CASE 11 N=32 serial_diff=0 parallel_diff=0
+CASE 12 N=32 serial_diff=0 parallel_diff=0
+CASE 13 N=32 serial_diff=0 parallel_diff=0
+CASE 14 N=32 serial_diff=0 parallel_diff=0
+CASE 15 N=32 serial_diff=0 parallel_diff=0
+CASE 16 N=32 serial_diff=0 parallel_diff=0
+CASE 17 N=32 serial_diff=0 parallel_diff=0
+CASE 18 N=32 serial_diff=0 parallel_diff=0
+CASE 19 N=32 serial_diff=0 parallel_diff=0
+CASE 20 N=32 serial_diff=0 parallel_diff=0
+CASE 21 N=64 serial_diff=0 parallel_diff=0
+CASE 22 N=64 serial_diff=0 parallel_diff=0
+CASE 23 N=64 serial_diff=0 parallel_diff=0
+CASE 24 N=64 serial_diff=0 parallel_diff=0
+CASE 25 N=64 serial_diff=53 parallel_diff=0
+CASE 26 N=64 serial_diff=0 parallel_diff=0
+CASE 27 N=64 serial_diff=0 parallel_diff=0
+CASE 28 N=64 serial_diff=0 parallel_diff=0
+CASE 29 N=64 serial_diff=0 parallel_diff=0
+CASE 30 N=64 serial_diff=0 parallel_diff=0
+CASE 31 N=64 serial_diff=0 parallel_diff=0
+CASE 32 N=64 serial_diff=0 parallel_diff=0
+CASE 33 N=64 serial_diff=0 parallel_diff=0
+CASE 34 N=64 serial_diff=0 parallel_diff=0
+CASE 35 N=64 serial_diff=0 parallel_diff=0
+CASE 36 N=64 serial_diff=0 parallel_diff=0
+CASE 37 N=64 serial_diff=0 parallel_diff=0
+CASE 38 N=64 serial_diff=0 parallel_diff=0
+CASE 39 N=64 serial_diff=0 parallel_diff=0
+CASE 40 N=64 serial_diff=0 parallel_diff=0
+CASE 41 N=128 serial_diff=0 parallel_diff=0
+CASE 42 N=128 serial_diff=0 parallel_diff=0
+CASE 43 N=128 serial_diff=0 parallel_diff=0
+CASE 44 N=128 serial_diff=0 parallel_diff=0
+CASE 45 N=128 serial_diff=68 parallel_diff=0
+CASE 46 N=128 serial_diff=0 parallel_diff=0
+CASE 47 N=128 serial_diff=0 parallel_diff=0
+CASE 48 N=128 serial_diff=0 parallel_diff=0
+CASE 49 N=128 serial_diff=0 parallel_diff=0
+CASE 50 N=128 serial_diff=0 parallel_diff=0
+CASE 51 N=128 serial_diff=0 parallel_diff=0
+CASE 52 N=128 serial_diff=0 parallel_diff=0
+CASE 53 N=128 serial_diff=0 parallel_diff=0
+CASE 54 N=128 serial_diff=0 parallel_diff=0
+CASE 55 N=128 serial_diff=0 parallel_diff=0
+CASE 56 N=128 serial_diff=0 parallel_diff=0
+CASE 57 N=128 serial_diff=0 parallel_diff=0
+CASE 58 N=128 serial_diff=0 parallel_diff=0
+CASE 59 N=128 serial_diff=0 parallel_diff=0
+CASE 60 N=128 serial_diff=0 parallel_diff=0
+CASE 61 N=192 serial_diff=0 parallel_diff=0
+CASE 62 N=192 serial_diff=0 parallel_diff=0
+CASE 63 N=192 serial_diff=0 parallel_diff=0
+CASE 64 N=192 serial_diff=0 parallel_diff=0
+CASE 65 N=192 serial_diff=37 parallel_diff=0
+CASE 66 N=192 serial_diff=0 parallel_diff=0
+CASE 67 N=192 serial_diff=0 parallel_diff=0
+CASE 68 N=192 serial_diff=0 parallel_diff=0
+CASE 69 N=192 serial_diff=0 parallel_diff=0
+CASE 70 N=192 serial_diff=0 parallel_diff=0
+CASE 71 N=192 serial_diff=0 parallel_diff=0
+CASE 72 N=192 serial_diff=0 parallel_diff=0
+CASE 73 N=192 serial_diff=0 parallel_diff=0
+CASE 74 N=192 serial_diff=0 parallel_diff=0
+CASE 75 N=192 serial_diff=0 parallel_diff=0
+CASE 76 N=192 serial_diff=0 parallel_diff=0
+CASE 77 N=192 serial_diff=0 parallel_diff=0
+CASE 78 N=192 serial_diff=0 parallel_diff=0
+CASE 79 N=192 serial_diff=0 parallel_diff=0
+CASE 80 N=192 serial_diff=0 parallel_diff=0
+CASE 81 N=320 serial_diff=0 parallel_diff=0
+CASE 82 N=320 serial_diff=0 parallel_diff=0
+CASE 83 N=320 serial_diff=0 parallel_diff=0
+CASE 84 N=320 serial_diff=0 parallel_diff=0
+CASE 85 N=320 serial_diff=60 parallel_diff=0
+CASE 86 N=320 serial_diff=0 parallel_diff=0
+CASE 87 N=320 serial_diff=0 parallel_diff=0
+CASE 88 N=320 serial_diff=0 parallel_diff=0
+CASE 89 N=320 serial_diff=0 parallel_diff=0
+CASE 90 N=320 serial_diff=0 parallel_diff=0
+CASE 91 N=320 serial_diff=0 parallel_diff=0
+CASE 92 N=320 serial_diff=0 parallel_diff=0
+CASE 93 N=320 serial_diff=0 parallel_diff=0
+CASE 94 N=320 serial_diff=0 parallel_diff=0
+CASE 95 N=320 serial_diff=0 parallel_diff=0
+CASE 96 N=320 serial_diff=0 parallel_diff=0
+CASE 97 N=320 serial_diff=0 parallel_diff=0
+CASE 98 N=320 serial_diff=0 parallel_diff=0
+CASE 99 N=320 serial_diff=0 parallel_diff=0
+CASE 100 N=320 serial_diff=0 parallel_diff=0
+VALIDATION COMPLETE cases=100 serial_different=6 parallel_different=0
+$finish called at time : 491760 ns : File "D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/sim/tb_softmax_current.sv" Line 107
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 26 19:00:04 2026...

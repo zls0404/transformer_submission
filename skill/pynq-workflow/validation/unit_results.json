@@ -1,0 +1,8 @@
+{
+  "execution_kind": "offline_mock",
+  "tests": 17,
+  "failures": 0,
+  "errors": 0,
+  "physical_board_access": false,
+  "passed": true
+}

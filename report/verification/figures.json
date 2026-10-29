@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "count": 20,
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "files": [
+    {
+      "path": "picture/int8/gelu.png",
+      "dpi": 400,
+      "png_sha256": "c98648a29bcec772fe47c8b1defab3d316479676a9045dfbbe213ac88aed0a8c"
+    },
+    {
+      "path": "picture/int8/gemm.png",
+      "dpi": 400,
+      "png_sha256": "595f756c749144b59a5888dd9a883c702af73bd13eda20b1c6048537ac4dead1"
+    },
+    {
+      "path": "picture/int8/softmax_baseline.png",
+      "dpi": 400,
+      "png_sha256": "ecb8030ac50b46d57415b048b7d5c3b193f00b20ee49566e55ea8d0c59695b66"
+    },
+    {
+      "path": "picture/int8/softmax_parallel.png",
+      "dpi": 400,
+      "png_sha256": "022d9122a86cea54287ca66ffa5ee583f29792c74cfe0cf90d3293f882ad2232"
+    },
+    {
+      "path": "picture/int8/softmax_serial.png",
+      "dpi": 400,
+      "png_sha256": "883d1fc3d2704362a189772d270536fe3b45e0df3298563689bfe55ecc93223b"
+    },
+    {
+      "path": "picture/bf16/pipeline_gelu.png",
+      "dpi": 400,
+      "png_sha256": "3d7fd9c2061f84240acb59428127c63aac77009a420ba6bf6604fe8a6243e1c3"
+    },
+    {
+      "path": "picture/bf16/pipeline_gemm.png",
+      "dpi": 400,
+      "png_sha256": "e79bd1f65efa5af082c9a7cac91556438ec7ac0bbabb854d5629a016ffe2b63d"
+    },
+    {
+      "path": "picture/bf16/pipeline_layernorm.png",
+      "dpi": 400,
+      "png_sha256": "8cd62571aab207847d288caa41877484e79efc2777bdb2554e1c2d08328594b9"
+    },
+    {
+      "path": "picture/bf16/pipeline_layernorm_affine.png",
+      "dpi": 400,
+      "png_sha256": "8841553f1a6c94553ebd868d72762bd7e9af80e86478e1b0b6f765fe5fa946aa"
+    },
+    {
+      "path": "picture/bf16/pipeline_masked_softmax.png",
+      "dpi": 400,
+      "png_sha256": "d1dc03d0c46322effefdecdf114957f6b02cf175b0105eab91388e3ff51de901"
+    },
+    {
+      "path": "picture/bf16/pipeline_rmsnorm.png",
+      "dpi": 400,
+      "png_sha256": "5653079fa6ae30030e19bdd9204fa51a37ee03dd32be0ec005fab37d2b05d0bd"
+    },
+    {
+      "path": "picture/bf16/pipeline_rmsnorm_affine.png",
+      "dpi": 400,
+      "png_sha256": "fa57644e008ff99a8391a93f26cf665266b50c2765fcd54aaa24250b1613651d"
+    },
+    {
+      "path": "picture/bf16/pipeline_silu.png",
+      "dpi": 400,
+      "png_sha256": "ed55cdf2b7610e1854e4c9b3408b44cd61b4c7fbd3e48d943aaf8f45e7f9a271"
+    },
+    {
+      "path": "picture/bf16/pipeline_softmax.png",
+      "dpi": 400,
+      "png_sha256": "68be853c70e47737824afed7aed0fcf53a00dddd52e46fc8fd82167b1aa1890e"
+    },
+    {
+      "path": "picture/bf16/pipeline_swiglu.png",
+      "dpi": 400,
+      "png_sha256": "0b6ac0c72f31b11c8f597172a4dfb6d72010991d8c43acfef015f51e83050644"
+    },
+    {
+      "path": "picture/bf16/standalone_gelu.png",
+      "dpi": 400,
+      "png_sha256": "43a7178799994b9c671f3cdce26e57a91fa8e9b5d60cabe3285268a990fa2cdc"
+    },
+    {
+      "path": "picture/bf16/standalone_layernorm.png",
+      "dpi": 400,
+      "png_sha256": "7482ec8cd6a36449fe7951bf6425e30f4dc2500738a1e25976716df1b857ac2d"
+    },
+    {
+      "path": "picture/bf16/standalone_rmsnorm.png",
+      "dpi": 400,
+      "png_sha256": "5f56e961fd6c90840fc23f88cd4efc21f845fba411567dac7b82d25eba7259ff"
+    },
+    {
+      "path": "picture/bf16/standalone_silu.png",
+      "dpi": 400,
+      "png_sha256": "7cb91d7e65e1cc14bc1a89e7b8ed7ce86af5b4d42d73cb711bc4d6a2fb4afd7b"
+    },
+    {
+      "path": "picture/bf16/standalone_softmax.png",
+      "dpi": 400,
+      "png_sha256": "db8bc49491fa5205dc91e00663ef22e126ccc0565b59d19a3f2a4b49d82b2a41"
+    }
+  ],
+  "note": "All files decoded/parsed. Two representative previews also visually inspected; numerical points checked by analysis and BF16 verify_delivery.py."
+}

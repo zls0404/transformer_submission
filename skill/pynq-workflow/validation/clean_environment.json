@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "isolation": "new venv without pip + -I -S -B; skill copied alone",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "commands": [
+    {
+      "label": "isolated standard-library behavior tests",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "two applications with one execution engine",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "45a1990bce4cb0d4dc3ddf42e536e18b1edd1269df7d94d38772ffb2b21b55b3",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "loopback contract inspection",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "041326eb8f1f3d0d8102c19212b8ca7363a647d08fc92db4dca50fe833063936",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "bind relative paths and pair hashes",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "f1ad4f1ad3cae57751a5fff33ed8e4365aba5221322b1f0179f9bc764d063f62",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "relocated bound contract",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "041326eb8f1f3d0d8102c19212b8ca7363a647d08fc92db4dca50fe833063936",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "portable expected values",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "7192f038f6817a568476854704a77dea9ecebb02424d932356aa2ec9c0d984a6",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "agent installation without changing globals",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "beaaf0be4a259eafed7bd4e38816fbf9587e0d71f57ed17a47ae981fb760ad24",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "int8 real artifact identity",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "6f4ee02cbce6e6dd2c3c54989548bb580f48efb3007a6da264eefcfa3eb4f788",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "int8 real Vivado reports",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "90e8fc6d37aecf353ecc9ed79772822919a054b41f498cba3539f2e2166283e6",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "bf16 real artifact identity",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "6b0f7cc9d1dcbbfe75e21a09ee9c4ce6ffec8622c5674494129b397bced8c104",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "bf16 real Vivado reports",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "d70b8e711467249449ac5a501300da44cc4607465d478aecabc6d19da274c19a",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "3840 measured GELU codes",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "380005430c524031c5baab19ffdf986dfe3ae3c5b7b332d7d022f8d695a90b69",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "measured BF16 failure remains failed",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "stdout_sha256": "9636ebef90a3647078dd429964690c7544f8b9d8df7a7907743b8fba1b2ddc90",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "label": "long tail is retained",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "1474745853a0316a4609e3b33709e5f1bddc01583ac654eed9942c995c9bbfff",
+      "stderr": "",
+      "passed": true
+    }
+  ],
+  "physical_board_access": false,
+  "not_claimed": [
+    "fresh operating system deployment",
+    "physical PYNQ image deployment",
+    "physical cross-board reuse"
+  ],
+  "record_kind": "Summary of the original isolated execution; command labels and actual return codes retained",
+  "original_record_sha256": "3a1c1744653ef96838ebed711ebd1c031e060af8fc780209a1308cf84020eb8f"
+}

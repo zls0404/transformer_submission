@@ -1,0 +1,16 @@
+level,operator,rows,case_id,name,category,finite,protocol_ok,r_q_relative_l2,case_ok
+standalone,softmax,1,0,zeros,nominal,False,True,nan,False
+standalone,layernorm,1,0,zeros,nominal,False,True,nan,False
+standalone,rmsnorm,1,0,zeros,nominal,False,True,nan,False
+standalone,silu,1,22,constant_minus_16,nominal,True,True,1.0,False
+standalone,silu,1,24,gap_probe_normal,protocol_probe,True,False,nan,False
+standalone,gelu,1,22,constant_minus_16,nominal,True,True,1.0,False
+standalone,gelu,1,24,gap_probe_normal,protocol_probe,True,False,nan,False
+pipeline,softmax,1,0,cold_zeros,nominal,False,True,nan,False
+pipeline,softmax,4,3,cold_random,nominal,False,True,nan,False
+pipeline,layernorm,1,0,cold_zeros,nominal,False,True,nan,False
+pipeline,rmsnorm,1,0,cold_zeros,nominal,False,True,nan,False
+pipeline,layernorm_affine,1,0,cold_zeros,nominal,False,True,nan,False
+pipeline,layernorm_affine,4,3,cold_random,nominal,False,True,nan,False
+pipeline,rmsnorm_affine,1,0,cold_zeros,nominal,False,True,nan,False
+pipeline,masked_softmax,1,0,cold_zeros,nominal,False,True,nan,False

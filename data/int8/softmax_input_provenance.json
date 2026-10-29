@@ -1,0 +1,12 @@
+{
+  "seed": 20261016,
+  "scale_in": 6,
+  "scale_out": 7,
+  "cases": 100,
+  "elements": 14720,
+  "input_quantization": "floor(x*64+0.5), signed int8 saturation; 0 clipped inputs",
+  "reference_source": "D:\\fpga\\pynq\\tansformer\\python\\validate_acc_iscas.py",
+  "reference_sha256": "12ad3dd1112229abea064a571e4e6836a7a07b029fdaf17e564e45038eca74bb",
+  "reference_crosscheck": "100/100 agree with original project Python",
+  "rtl_sha256": "663914717f047c4077da912f7641d478513692c1e797303cd93d9f724d3993a4"
+}

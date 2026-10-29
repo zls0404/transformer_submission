@@ -1,0 +1,11 @@
+﻿op,operator,total,passed,nominal,nominal_passed,protocol_passed,nonfinite
+7,gemm,6,6,4,4,6,0
+0,softmax,6,5,4,3,6,1
+1,layernorm,6,5,4,3,6,1
+2,rmsnorm,6,5,4,3,6,1
+3,silu,6,6,4,4,6,0
+4,gelu,6,6,4,4,6,0
+8,layernorm_affine,6,5,4,3,6,1
+9,rmsnorm_affine,6,5,4,3,6,1
+10,masked_softmax,6,5,4,3,6,1
+11,swiglu,6,6,4,4,6,0

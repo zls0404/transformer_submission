@@ -1,0 +1,7 @@
+vivado=2026.1
+part=xc7z020clg400-1
+clock_mhz=100
+project=C:/Users/lenovo/AppData/Local/Temp/pynq_skill_7ptvzh19/project
+source_run=impl_1
+bit=loopback.bit
+hwh=loopback.hwh

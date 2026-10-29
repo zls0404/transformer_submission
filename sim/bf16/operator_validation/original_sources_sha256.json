@@ -1,0 +1,154 @@
+[
+  {
+    "path": "rtl/acc_block.v",
+    "sha256": "4a442c81e8578052e187fc3b8b36f0cda02616024cbbdd973a1f02c899b06795"
+  },
+  {
+    "path": "rtl/add_mul_block.v",
+    "sha256": "e8b3480d35a2aee43971f9a37496f0524fd5ec26097879502ebed5a1688b39f2"
+  },
+  {
+    "path": "rtl/add_mul_block_x4.v",
+    "sha256": "ae1490ff048a6f1a8e7b2e0b698c81ab68bc5392f85cb7a6d7b91992ebc180c9"
+  },
+  {
+    "path": "rtl/basic_block.v",
+    "sha256": "6f520c2cd7659c79288c80eb5f63883636b999761f672b94dcb95443ba5ef11c"
+  },
+  {
+    "path": "rtl/basic_block_4.v",
+    "sha256": "2bf2045aa290393f6e693185cb92be70cc20822ea6e87815c58b903d3ad4a116"
+  },
+  {
+    "path": "rtl/bf16_pe.sv",
+    "sha256": "df239dac5e0b86cc1af110fc536e6a4c321311aa242b5c2d1bc35a318b66c34d"
+  },
+  {
+    "path": "rtl/bf16_pe_array.sv",
+    "sha256": "cb8f395cfe94b3e6bc597e7134f430451bcbf4ac6706228169fc88cb066420a5"
+  },
+  {
+    "path": "rtl/bf16_pe_line.sv",
+    "sha256": "cf070ef5f2b289f8d26d9f81669dd319a56ee1d7e86a56a93609d3832c6f2683"
+  },
+  {
+    "path": "rtl/fp32_to_bf16_rne.v",
+    "sha256": "58e6186b3e6288045a7c099cf5cfc7e86fdfa85066ece1f8feb26f610bc9bf33"
+  },
+  {
+    "path": "rtl/gluttonous_array.v",
+    "sha256": "fb09cbfe57376220dfb7e236e4ffe128a80f515ea5956e13c36d856d528b043c"
+  },
+  {
+    "path": "rtl/max_block.v",
+    "sha256": "7ebef3dee74b317714b61bae0ea75fdd7aa207c54a59e6236c91a846ad2b3eff"
+  },
+  {
+    "path": "rtl/pe_delay.sv",
+    "sha256": "ef5f93e361332d6256d792b809cbbea5557d578f5e0c76c9f9799d4b56cfb297"
+  },
+  {
+    "path": "rtl/snake_acc_axi.sv",
+    "sha256": "35618a2713ba43470303aa80206ab4c94d6fb3fcdbe3ff1d9c06ae8e2a200ead"
+  },
+  {
+    "path": "rtl/snake_acc_top.sv",
+    "sha256": "712ebbfc6c1d3caba4c0bfa6dcccb20016c1bfef8205296eb6de7cf4b265fcd1"
+  },
+  {
+    "path": "rtl/snake_frame_fifo.sv",
+    "sha256": "d2327e39c7ed12d0cc77e441ee341317e67a905a2a4466fdadc9b8819063005d"
+  },
+  {
+    "path": "rtl/squre_exp_block.v",
+    "sha256": "55ce40c48ea21566f4f408c47acf71bb1755807f4f39b247c8d097327bfc0b84"
+  },
+  {
+    "path": "ip/floating_acc/floating_acc.xci",
+    "sha256": "778cdc69974ac1f3dda3fdf7bc47e87d9b698ac006c1a56e0d11af01d8d8a2da"
+  },
+  {
+    "path": "ip/floating_acc/sim/floating_acc.vhd",
+    "sha256": "803bb39180c47ebb84cc547afc4281f890fa23ec8d2688c12ff7714663e90e32"
+  },
+  {
+    "path": "ip/floating_add/floating_add.xci",
+    "sha256": "5c845bcb0427a08201d24a21f2310f89a8ddac2929f404ec1c0783534f7f0b37"
+  },
+  {
+    "path": "ip/floating_add/sim/floating_add.vhd",
+    "sha256": "10c5c4e606c61014464b8e7d77c1da839a3c09930229f851b8f46597c4384794"
+  },
+  {
+    "path": "ip/floating_compare/floating_compare.xci",
+    "sha256": "0ddf9ad955c3c77428223896244258a8ecb2edb4c64e77708eb12914e9f0affd"
+  },
+  {
+    "path": "ip/floating_compare/sim/floating_compare.vhd",
+    "sha256": "72b914b9ff6929551d70ede8d4bae6d25bf3c7925ac089380b5a3aa746b0e8dc"
+  },
+  {
+    "path": "ip/floating_compare1/floating_compare1.xci",
+    "sha256": "8533c8ffb0e6ed377e803ea71f02f7c7444e648aac09197614191a32169e75c8"
+  },
+  {
+    "path": "ip/floating_compare1/sim/floating_compare1.vhd",
+    "sha256": "437870d2dad1a855fd118debbc8fd0ff34ba6a585149f2f012f8b2bb53880fbe"
+  },
+  {
+    "path": "ip/floating_exp/floating_exp.xci",
+    "sha256": "51ab6d92b352b3c090e9c97bfd8fc007ce4165dafbef79fb5f1bab0a41df493a"
+  },
+  {
+    "path": "ip/floating_exp/sim/floating_exp.vhd",
+    "sha256": "1b2271becd2544a29ced63b8e1c59e66a1e7af60131471a00d3d7a2324a6500c"
+  },
+  {
+    "path": "ip/floating_ln/floating_ln.xci",
+    "sha256": "ac74724bc8fc9bf0fdb8c2a525179ecfd2e267edee3728fb0d152e344033de1a"
+  },
+  {
+    "path": "ip/floating_ln/sim/floating_ln.vhd",
+    "sha256": "e46221cb820be1f8adcfbad12d6402b0c44eb478461fea754775b22589f461cb"
+  },
+  {
+    "path": "ip/floating_mul/floating_mul.xci",
+    "sha256": "fe99deb2f656c6759de8c23680b0c260ae2be1884e2e552ad4e2be7edea457aa"
+  },
+  {
+    "path": "ip/floating_mul/sim/floating_mul.vhd",
+    "sha256": "a560ab857dc159a08a807a715eaff6491f502a5abb2194091dc48f048d45d6d9"
+  },
+  {
+    "path": "ip/floating_rec/floating_rec.xci",
+    "sha256": "27eaefd25d0212d5be16b2889e90073c0648d1766203d6d6bf59ea71d0fef6a5"
+  },
+  {
+    "path": "ip/floating_rec/sim/floating_rec.vhd",
+    "sha256": "74da4e5e2cf78bd8b16bb38ac22f5aa84dbbe71c7f0c70bea1368dc87e4e3fd7"
+  },
+  {
+    "path": "ip/floating_rsr/floating_rsr.xci",
+    "sha256": "3ea502969ce4f6142bcc8b323860d0285841d9d0f4827dbea7d4fc2a8cf62b43"
+  },
+  {
+    "path": "ip/floating_rsr/sim/floating_rsr.vhd",
+    "sha256": "5568a676eea2ad47ef9cf5f5c093db05cbc9a4c6675d082c1465ba4189365059"
+  },
+  {
+    "path": "ip/fp16_2_fp32/fp16_2_fp32.xci",
+    "sha256": "0a9878c5ef85fff2662ac6fe22e8443d08fbd84a6d1e6f9a9c235b987b43f345"
+  },
+  {
+    "path": "ip/fp16_2_fp32/sim/fp16_2_fp32.vhd",
+    "sha256": "47c9f5c6023056acf481f21a711482a662dfd51057bb1dd71e50d49fbcff117b"
+  },
+  {
+    "path": "ip/fp32_2_fp16/fp32_2_fp16.xci",
+    "sha256": "ff13dd520f87ebe9109c155f733d82ae109c751058a5c62cd3cedddc3e850b89"
+  },
+  {
+    "path": "ip/fp32_2_fp16/sim/fp32_2_fp16.vhd",
+    "sha256": "b84223c96f98dcdbfe1d47e028dbc46ae25ccb223a80687262f3ac9a9b9c68ca"
+  }
+]

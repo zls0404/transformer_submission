@@ -1,0 +1,7 @@
+build/generated/
+.Xil/
+NA/
+**/__pycache__/
+**/xsim.dir/
+*.jou
+*.pb

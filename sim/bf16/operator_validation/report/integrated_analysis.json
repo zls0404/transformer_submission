@@ -1,0 +1,105 @@
+{
+  "summary": [
+    {
+      "op": 7,
+      "operator": "gemm",
+      "total": 6,
+      "passed": 6,
+      "nominal": 4,
+      "nominal_passed": 4,
+      "protocol_passed": 6,
+      "nonfinite": 0
+    },
+    {
+      "op": 0,
+      "operator": "softmax",
+      "total": 6,
+      "passed": 5,
+      "nominal": 4,
+      "nominal_passed": 3,
+      "protocol_passed": 6,
+      "nonfinite": 1
+    },
+    {
+      "op": 1,
+      "operator": "layernorm",
+      "total": 6,
+      "passed": 5,
+      "nominal": 4,
+      "nominal_passed": 3,
+      "protocol_passed": 6,
+      "nonfinite": 1
+    },
+    {
+      "op": 2,
+      "operator": "rmsnorm",
+      "total": 6,
+      "passed": 5,
+      "nominal": 4,
+      "nominal_passed": 3,
+      "protocol_passed": 6,
+      "nonfinite": 1
+    },
+    {
+      "op": 3,
+      "operator": "silu",
+      "total": 6,
+      "passed": 6,
+      "nominal": 4,
+      "nominal_passed": 4,
+      "protocol_passed": 6,
+      "nonfinite": 0
+    },
+    {
+      "op": 4,
+      "operator": "gelu",
+      "total": 6,
+      "passed": 6,
+      "nominal": 4,
+      "nominal_passed": 4,
+      "protocol_passed": 6,
+      "nonfinite": 0
+    },
+    {
+      "op": 8,
+      "operator": "layernorm_affine",
+      "total": 6,
+      "passed": 5,
+      "nominal": 4,
+      "nominal_passed": 3,
+      "protocol_passed": 6,
+      "nonfinite": 1
+    },
+    {
+      "op": 9,
+      "operator": "rmsnorm_affine",
+      "total": 6,
+      "passed": 5,
+      "nominal": 4,
+      "nominal_passed": 3,
+      "protocol_passed": 6,
+      "nonfinite": 1
+    },
+    {
+      "op": 10,
+      "operator": "masked_softmax",
+      "total": 6,
+      "passed": 5,
+      "nominal": 4,
+      "nominal_passed": 3,
+      "protocol_passed": 6,
+      "nonfinite": 1
+    },
+    {
+      "op": 11,
+      "operator": "swiglu",
+      "total": 6,
+      "passed": 6,
+      "nominal": 4,
+      "nominal_passed": 4,
+      "protocol_passed": 6,
+      "nonfinite": 0
+    }
+  ],
+  "missing": []
+}

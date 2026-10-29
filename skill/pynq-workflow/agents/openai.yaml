@@ -1,0 +1,4 @@
+interface:
+  display_name: "PYNQ 工程构建与验证"
+  short_description: "核对 Overlay、DMA、参考结果和可复现的工程证据"
+  default_prompt: "使用 $pynq-workflow 核对当前 PYNQ 工程，先确认接口、板卡和执行范围，再给出可复现验证结果。"

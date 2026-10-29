@@ -1,0 +1,165 @@
+{
+  "checks": [
+    {
+      "name": "unit_suite",
+      "passed": true,
+      "result": {
+        "execution_kind": "offline_mock",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "physical_board_access": false,
+        "passed": true
+      }
+    },
+    {
+      "name": "interrupt_halt_confirmed",
+      "passed": true,
+      "result": {
+        "exception": "KeyboardInterrupt",
+        "halt_confirmed": true,
+        "buffers_freed_at_catch": [
+          true,
+          true
+        ],
+        "retained_before_fake_cleanup": false,
+        "error": "KeyboardInterrupt: interrupt after receive start"
+      }
+    },
+    {
+      "name": "interrupt_halt_unconfirmed",
+      "passed": true,
+      "result": {
+        "exception": "QuarantinedDMA",
+        "halt_confirmed": false,
+        "buffers_freed_at_catch": [
+          false,
+          false
+        ],
+        "retained_before_fake_cleanup": true,
+        "error": "KeyboardInterrupt: interrupt after receive start"
+      }
+    },
+    {
+      "name": "second_interrupt_during_halt",
+      "passed": true,
+      "result": {
+        "exception": "QuarantinedDMA",
+        "halt_confirmed": false,
+        "buffers_freed_at_catch": [
+          false,
+          false
+        ],
+        "retained_before_fake_cleanup": true,
+        "error": "KeyboardInterrupt: interrupt after receive start"
+      }
+    },
+    {
+      "name": "register_bounds",
+      "passed": true,
+      "result": {
+        "missing": "HWH must identify one register window; missing/ambiguous range needs an explicit design-specific adapter",
+        "last_legal": "accepted",
+        "past_end": "Register outside HWH address range"
+      }
+    },
+    {
+      "name": "input_single_read_and_hash",
+      "passed": true,
+      "result": {
+        "captured_original_input_hash": "fa17105158b9e11eac7261af0f2280a48d5b4b7f7bf16b80469135de6b28235a",
+        "current_input_hash": "358979700431bb9a167229808c7bb63a88528ff08f85dd28744147c352b9e384",
+        "output_used_original_payload": true,
+        "retry_rejected_before_loading": true,
+        "error": "Input CSV SHA-256 differs from the bound contract"
+      }
+    },
+    {
+      "name": "shipped_template_reuse",
+      "passed": true,
+      "result": [
+        {
+          "name": "loopback",
+          "passed": true,
+          "comparison": {
+            "passed": true,
+            "elements": 4,
+            "failed_indices": [],
+            "nonfinite_indices": [],
+            "atol": 0,
+            "rtol": 0,
+            "mae": 0.0,
+            "rmse": 0.0,
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "relative_l2_defined": true
+          },
+          "input_hashes": {
+            "x": {
+              "file": "inputs/loopback_input.csv",
+              "sha256": "fa17105158b9e11eac7261af0f2280a48d5b4b7f7bf16b80469135de6b28235a",
+              "file_bytes": 32
+            }
+          },
+          "events": [
+            [
+              "recv",
+              "axi_dma"
+            ],
+            [
+              "send",
+              "axi_dma"
+            ]
+          ],
+          "changed_input_rejected": true
+        },
+        {
+          "name": "vector_add",
+          "passed": true,
+          "comparison": {
+            "passed": true,
+            "elements": 4,
+            "failed_indices": [],
+            "nonfinite_indices": [],
+            "atol": 0,
+            "rtol": 0,
+            "mae": 0.0,
+            "rmse": 0.0,
+            "max_abs": 0.0,
+            "relative_l2": 0.0,
+            "relative_l2_defined": true
+          },
+          "input_hashes": {
+            "a": {
+              "file": "inputs/vector_a.csv",
+              "sha256": "fa17105158b9e11eac7261af0f2280a48d5b4b7f7bf16b80469135de6b28235a",
+              "file_bytes": 32
+            },
+            "b": {
+              "file": "inputs/vector_b.csv",
+              "sha256": "95e40a9867e9deb11425cd5491389e3b16191010848969601be70e94bd6611aa",
+              "file_bytes": 36
+            }
+          },
+          "events": [
+            [
+              "recv",
+              "dma_out"
+            ],
+            [
+              "send",
+              "dma_a"
+            ],
+            [
+              "send",
+              "dma_b"
+            ]
+          ],
+          "changed_input_rejected": true
+        }
+      ]
+    }
+  ],
+  "source_unchanged": true,
+  "all_passed": true
+}

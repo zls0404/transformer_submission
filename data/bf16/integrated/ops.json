@@ -1,0 +1,12 @@
+{
+  "7": "gemm",
+  "0": "softmax",
+  "1": "layernorm",
+  "2": "rmsnorm",
+  "3": "silu",
+  "4": "gelu",
+  "8": "layernorm_affine",
+  "9": "rmsnorm_affine",
+  "10": "masked_softmax",
+  "11": "swiglu"
+}

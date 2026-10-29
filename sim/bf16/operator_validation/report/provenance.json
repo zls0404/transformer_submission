@@ -1,0 +1,64 @@
+{
+  "path_base": "project_root",
+  "time_beijing": "2026-10-26T19:13:31.875592+08:00",
+  "tool": "Vivado/XSim 2026.1",
+  "clock_period_ns": 10,
+  "seed": 20261021,
+  "N": 768,
+  "epsilon": 9.999999747378752e-06,
+  "gelu_coefficient": 1.7017449140548706,
+  "nominal_relative_l2_limit": 0.05,
+  "zero_ref_absolute_limit": 0.002,
+  "modified_imported_sources": [],
+  "missing_results": [],
+  "files": [
+    {
+      "path": "data/bf16/inputs.hex",
+      "sha256": "ee29e6c2cadb2a7f96a3999edf0e1dc1bbaae9610bab9d15d32a5ff1eb36deb1"
+    },
+    {
+      "path": "data/bf16/reference_data.npz",
+      "sha256": "72673e29f24bd2e2d8c308dd5a36583ac74d440cc203a698b1691339b5c5df75"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/gelu/rtl_samples.csv",
+      "sha256": "975cfbda6cf40ef596d238d9b82ad685bbe1e40a3eda1662fb213a735167eae4"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/gelu/rtl_summary.csv",
+      "sha256": "463002e3819fe6fa3e22c28676636cf288842ee54685533d267f7a99af6fab2d"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/layernorm/rtl_samples.csv",
+      "sha256": "e371a8cd137264d7bba1b8dd5859722b1304c3cfc34abe1830f7c58fc646db10"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/layernorm/rtl_summary.csv",
+      "sha256": "e3a09fdac5c97e18d8b03df367f301ed5869cf633bd40834d8b040d68a8f0edf"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/rmsnorm/rtl_samples.csv",
+      "sha256": "2caa5e346bfd8a48c92356d280d9529c599115fe46cfcc040972c213c46cf4e8"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/rmsnorm/rtl_summary.csv",
+      "sha256": "5ce24f371cf454126812ecbdfbdf5b8a355654fe0bbdb902bf3e2ef8adc4c9fe"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/silu/rtl_samples.csv",
+      "sha256": "8ffc91c92dca8c10388e9518ae5eb13c1e5c1c343f053d616ed8d526bbd4a9a9"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/silu/rtl_summary.csv",
+      "sha256": "7ab01d1d5c4ee4d71850a08514a6d18b0a106da20283cf323084f2227caa982a"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/softmax/rtl_samples.csv",
+      "sha256": "c3ec9f190274f3797aa88023ca31d436791f1bf7e2096894fa16eb656502ab35"
+    },
+    {
+      "path": "sim/bf16/operator_validation/results/softmax/rtl_summary.csv",
+      "sha256": "66a541ac2b8e8ac9213e0edffbcde41b5b53bd58265fd7750af805be80f381e9"
+    }
+  ]
+}

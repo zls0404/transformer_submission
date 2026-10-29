@@ -1,0 +1,14 @@
+{
+  "imported_source_files_unchanged": 38,
+  "test_cases": 194,
+  "passed": 179,
+  "failed": 15,
+  "standalone_cases": 130,
+  "pipeline_single_row_cases": 60,
+  "production_four_row_cases": 4,
+  "figures": 15,
+  "png_dpi": 400,
+  "vivado_simulation_projects": 15,
+  "waveform_files": 19,
+  "checked": "SHA-256, CSV capture shape, plotted F/Q/R points, independently recomputed aggregate MAE, project source references, retained raw captures and WDBs"
+}

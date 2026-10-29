@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "not_run",
+  "physical_board_access": false,
+  "application": null,
+  "board": null,
+  "part": null,
+  "pynq_version": null,
+  "python_version": null,
+  "vivado_version": null,
+  "started_at": null,
+  "first_correct_hardware_output_at": null,
+  "elapsed_minutes": null,
+  "overlay_sha256": null,
+  "contract_sha256": null,
+  "input_sha256": null,
+  "adaptations": [],
+  "failures_and_corrections": [],
+  "transaction_passed": null,
+  "numerical_passed": null,
+  "evidence_paths": [],
+  "notes": "Template only. Null means not measured."
+}

@@ -1,0 +1,15 @@
+{
+  "count": 5,
+  "unit": "us",
+  "scope": "synthetic statistics test; not a hardware measurement",
+  "min": 1.0,
+  "mean": 200.8,
+  "std": 399.6,
+  "p50": 1.0,
+  "p95": 800.1999999999998,
+  "p99": 960.04,
+  "max": 1000.0,
+  "percentile_method": "linear interpolation, index=(n-1)*q",
+  "tail_sample_note": "P99 is weakly supported with fewer than 100 samples",
+  "source_sha256": "c951c7634a1b23d00b489c0a11703c40a48424bfff3ad2ce02974c8fa1a8e917"
+}

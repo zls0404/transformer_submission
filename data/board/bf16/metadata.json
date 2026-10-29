@@ -1,0 +1,15 @@
+{
+  "evidence_kind": "regenerated_software_inputs_and_reference_plus_existing_measured_summary",
+  "seed": 2026,
+  "m": 4,
+  "k": 4,
+  "n": 768,
+  "active_n": 128,
+  "hardware_executed_by_export": false,
+  "input_prefixes_match_saved_log": true,
+  "board_log_sha256": "ee0fe11812a05f82a524e665eeab1e446ad6574006b454d7dd14525d8418a31e",
+  "reference_script_sha256": "9160ed18b7b9f2886dac1bf8ea50f4dc0bea124f2cae21e75e91cb0b471f7440",
+  "latency_scope": "Same-board ARM NumPy vs FPGA; repeated runs exclude A/B upload and include result DMA. Not full-model speedup.",
+  "actual_full_output_arrays_available": false,
+  "note": "Expected CSV/NPZ values are software references regenerated from the saved benchmark code. They are not newly captured FPGA outputs."
+}

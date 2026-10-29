@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "data/int8/gelu_cases.json",
+      "sha256": "7703880bbac5e41c3c4d1c4065f8ea862243478b2cf83921ff946d53f386df88"
+    },
+    {
+      "path": "data/int8/gelu_vectors.txt",
+      "sha256": "506cefbd4dff66cc9c7132e676c24c528ed3481543e464ee99c61539d300c16c"
+    },
+    {
+      "path": "data/int8/mm_cases.json",
+      "sha256": "c56cac4e5b8b8974af6879ae74388cc1174eb7274323594c51b9a4ba8bd6821a"
+    },
+    {
+      "path": "data/int8/mm_reference.npz",
+      "sha256": "063a38acc28b13f7e300518619794945fe4749e725fe6a0a343d897b3a335fa3"
+    },
+    {
+      "path": "data/int8/mm_vectors.txt",
+      "sha256": "85430a593f922f71f575e761e47a7145c410ab15ceb86f8f400e16288d8d9c17"
+    },
+    {
+      "path": "data/int8/softmax_cases.json",
+      "sha256": "ed32c8efe81ae01728338d545871f6c515c1360c047bcb30f4969661065e50e2"
+    },
+    {
+      "path": "data/int8/softmax_input_provenance.json",
+      "sha256": "79917743bf4ce6f75131b11dba84e34428b95a0dade0fa8505d4e673f343f1ce"
+    },
+    {
+      "path": "data/int8/softmax_vectors.txt",
+      "sha256": "8a9cd04c743522ec12202ab45370ca778b172234dd75914ee7d2b5843760191d"
+    },
+    {
+      "path": "data/bf16/cases.json",
+      "sha256": "2cae509ceef888d2d8c9660d2eb676c2af925f394be74b7b249f1aebad167604"
+    },
+    {
+      "path": "data/bf16/gaps.hex",
+      "sha256": "cdd1408dbed19b3350aa6da35aa18608adcb2d0cc581c5e873f78f38869debfb"
+    },
+    {
+      "path": "data/bf16/input_vectors.csv",
+      "sha256": "a29bf7765aec7f6468bfe0e5ea76587ac09ab6dbe02c668c1bc145a0930c13fb"
+    },
+    {
+      "path": "data/bf16/inputs.hex",
+      "sha256": "ee29e6c2cadb2a7f96a3999edf0e1dc1bbaae9610bab9d15d32a5ff1eb36deb1"
+    },
+    {
+      "path": "data/bf16/integrated/a.hex",
+      "sha256": "76584cd5314740e9f96e441b687a26ae46d8e259babe04166cfeabce42bb80aa"
+    },
+    {
+      "path": "data/bf16/integrated/aux_data.hex",
+      "sha256": "2d4a7b7c2ee8276cc28095340fdf414b5195aedb3625054aff1f9e0d84a863c0"
+    },
+    {
+      "path": "data/bf16/integrated/b.hex",
+      "sha256": "06267ddb4c1e9dde4823545acc36f0892b23132469e85d4a202a21f0d0b58426"
+    },
+    {
+      "path": "data/bf16/integrated/cases.json",
+      "sha256": "369ec74973b5a4c8267bfc8ccf15dbde341402b06b410401027b572d392932c4"
+    },
+    {
+      "path": "data/bf16/integrated/ops.json",
+      "sha256": "8defb77f2664f65af610b2f6d3b2db3c231c56e2bed458a513e2f4e3d4bf59cc"
+    },
+    {
+      "path": "data/bf16/integrated/references.npz",
+      "sha256": "dbc1b459354325e161e4f55b45e9f67945c7b4262f8330ae06c9b675590435ae"
+    },
+    {
+      "path": "data/bf16/reference_data.npz",
+      "sha256": "72673e29f24bd2e2d8c308dd5a36583ac74d440cc203a698b1691339b5c5df75"
+    }
+  ],
+  "content_preserved": true
+}

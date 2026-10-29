@@ -1,0 +1,71 @@
+# BF16 算子独立仿真报告
+
+本报告来自原工程 RTL 与 AMD 浮点 IP 的真实 XSim 行为仿真。没有用 Python 结果替代硬件输出。
+五种算子是共享 Snake 阵列的五种配置；测试入口排除了 GEMM、PS、DMA 和 AXI-Lite。
+
+## 测试配置与数值基准
+
+- 时钟周期 10 ns（100 MHz 仿真激励），固定每行 768 个元素、每拍 4 个 BF16，共 192 拍。
+- 每个算子 24 组常规输入；另外各 1 组输入停顿探测、1 组扩展数值范围探测，单独列出。
+- 常规输入连续，每行前复位控制/FIFO 并排空浮点 IP；不代表已支持无复位连续多行。
+- F：对原始浮点输入做 FP64 数学参考；Q：对 BF16 解码输入做 FP64 参考，再舍入成 BF16；R：RTL 的实际 BF16 输出。
+- Q−F 含输入/输出格式舍入误差；R−Q 用于检查硬件计算偏差。Q 不模拟每一级 FP32 舍入，不能要求逐位相同。
+- 同时保留 RTL 原始 FP32 输出，检查最终 BF16 转换是否与原始 RNE 规则逐位一致。
+- LayerNorm/RMSNorm 使用 RTL 的 epsilon，无 affine 参数（gamma=1、beta=0）。
+- GELU 的主参考是 RTL 的 x*sigmoid(1.701744914054871*x)，tanh GELU 仅作为额外算法差异比较。
+- 数值判据预设为 R 对 Q 的相对 L2≤5%（沿用所给上板脚本的应用判据）；零参考改用最大绝对误差≤0.002。此阈值不是模型任务精度保证。
+- 功能检查：输出数量/顺序、无 X/Z、有限数值、FIFO 故障、超时、额外输出、BF16 舍入、各算子的数值性质。接口没有 ready/TLAST，不虚构这些协议检查。
+
+## 常规测试汇总
+
+|算子|帧完整性通过|数值判据通过|全部检查通过|首输出周期|末输出周期|非有限数用例数|有限输出最大绝对误差 R−Q|
+|---|---:|---:|---:|---:|---:|---:|---:|
+|softmax|24/24|23/24|23/24|507|698|1|6.10352e-05|
+|layernorm|24/24|23/24|23/24|330|521|1|0|
+|rmsnorm|24/24|23/24|23/24|317|508|1|0|
+|silu|24/24|23/24|23/24|79|270|0|0.03125|
+|gelu|24/24|23/24|23/24|79|270|0|0.015625|
+
+延时从首个有效输入被上升沿采样，到首个/最后一个有效输出被上升沿采样的周期差计算；乘以 10 得 ns。包含算子内部缓存与流水线，不包含行前复位、矩阵乘法、DDR 或 DMA，也不是综合后的最高频率。
+
+## 异常与边界探测（保留全部结果）
+
+|算子|用例|类别|输出拍数|协议|数值判据|最大绝对误差 R−Q|FIFO故障|
+|---|---|---|---:|---|---|---:|---|
+|softmax|zeros|nominal|192|通过|未通过|N/A|0/0|
+|softmax|gap_probe_normal|protocol_probe|192|通过|通过|3.05176e-05|0/0|
+|softmax|extended_range_96|range_probe|192|通过|通过|1.45519e-11|0/0|
+|layernorm|zeros|nominal|192|通过|未通过|N/A|0/0|
+|layernorm|gap_probe_normal|protocol_probe|192|通过|通过|0|0/0|
+|layernorm|extended_range_96|range_probe|192|通过|通过|0|0/0|
+|rmsnorm|zeros|nominal|192|通过|未通过|N/A|0/0|
+|rmsnorm|gap_probe_normal|protocol_probe|192|通过|通过|0|0/0|
+|rmsnorm|extended_range_96|range_probe|192|通过|通过|0|0/0|
+|silu|constant_minus_16|nominal|192|通过|未通过|1.80304e-06|0/0|
+|silu|gap_probe_normal|protocol_probe|384|异常|未通过|N/A|1/0|
+|silu|extended_range_96|range_probe|192|通过|通过|0.0078125|0/0|
+|gelu|constant_minus_16|nominal|192|通过|未通过|2.39879e-11|0/0|
+|gelu|gap_probe_normal|protocol_probe|384|异常|未通过|N/A|1/0|
+|gelu|extended_range_96|range_probe|192|通过|通过|0.0078125|0/0|
+
+输入停顿探测超出了原集成顶层连续送入 192 拍的常规使用方式，不把其结果混入常规通过统计。扩展范围结果不代表已验证所有 BF16 数值范围。异常不删除、不修正原 RTL。
+
+## 如何理解本次异常
+
+1. Softmax、LayerNorm、RMSNorm 的首组全零输入出现 NaN；后面的 signed_zeros 用例输出有限且通过。这里不能据此断定任何全零输入都会失败，也不能直接归因到板卡。尚需定位共享阵列的启动路径。
+2. SiLU、GELU 在恒定 −16 输入上输出 0，而理想结果分别约为 −1.8e−6、−2.4e−11。相对 L2 为 1，因此未通过预设的相对误差判据；绝对误差很小，两者必须一起解读。本报告没有事后放宽阈值。
+3. 输入每隔 17 拍插入一次空拍时，SiLU、GELU 各输出 384 拍并出现 FIFO 故障；这是连续输入假设之外的探测结果，应避免据此宣称接口支持任意输入停顿。
+4. 对很接近的输入，BF16 输入舍入本身可能抹掉差异。尤其归一化要同时查看 Q−F 和 R−Q，不能把输入量化损失都归到硬件计算。
+
+## 文件与限制
+
+- `case_metrics.csv`：每个算子、每组用例的全部误差与延时。
+- `operator_summary.csv`：常规测试汇总。
+- `../results/<算子>/rtl_samples.csv`、`rtl_summary.csv`、`xsim.log`、`validation.wdb`：原始仿真证据和波形。
+- `../results/<算子>/three_value_comparison.csv`：完整输出用例的逐元素 F/Q/R 与内部 FP32 对比（包含 NaN）；不完整或额外输出始终保留在原始采样 CSV。
+- `../sim/tb_softmax.sv` 等：五种算子的独立仿真顶层；公共激励与记录在 `tb_operator_validation.sv`。
+- `provenance.json` 与 `../original_sources_sha256.json`：文件来源、判据、校验记录。
+- 导入源码/IP 校验：全部未修改。
+- 本次未测上板延时、面积、功耗、Fmax 或神经网络任务准确率；独立入口使用同一原始共享阵列，不代表已经完成五套最小面积硬件裁剪。
+- 五种算子的通过证据来自命令行 XSim。GUI 工程可由 scripts/create_project.tcl 创建；本报告不将 GUI 交互启动作为已验证路径。
+- 结果完整性：五种算子全部采集完成。

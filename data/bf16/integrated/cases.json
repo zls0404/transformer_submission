@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "cold_zeros",
+    "category": "nominal"
+  },
+  {
+    "id": 1,
+    "name": "cold_constant_one",
+    "category": "nominal"
+  },
+  {
+    "id": 2,
+    "name": "cold_positive_ramp",
+    "category": "nominal"
+  },
+  {
+    "id": 3,
+    "name": "cold_random",
+    "category": "nominal"
+  },
+  {
+    "id": 4,
+    "name": "random_input_bubbles_output_backpressure",
+    "category": "protocol_probe"
+  },
+  {
+    "id": 5,
+    "name": "retained_input_repeat",
+    "category": "sequence_probe"
+  }
+]

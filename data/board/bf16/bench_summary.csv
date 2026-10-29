@@ -1,0 +1,11 @@
+operation,check,cpu_mean_us,fpga_mean_us,cpu_fpga_ratio
+BF16 GEMM bypass,PASS,1654.31,1116.17,1.482
+GEMM + Snake Softmax,PASS,4536.22,1145.43,3.960
+GEMM + Snake LayerNorm,PASS,4172.18,1132.38,3.684
+GEMM + Snake RMSNorm,PASS,3671.53,1133.67,3.239
+GEMM + Snake SiLU,PASS,3635.90,1127.78,3.224
+GEMM + Snake sigmoid GELU,PASS,3779.94,1123.62,3.364
+GEMM + LayerNorm affine,PASS,4676.46,1130.99,4.135
+GEMM + RMSNorm affine,PASS,3944.08,1211.84,3.255
+GEMM + masked Softmax,PASS,4015.18,1143.97,3.510
+SwiGLU (two GEMMs),PASS,6829.15,1701.08,4.015

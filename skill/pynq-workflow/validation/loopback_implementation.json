@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "part": "xc7z020clg400-1",
+  "wns_ns": 1.97,
+  "whs_ns": 0.009,
+  "wpws_ns": 3.75,
+  "tns_ns": 0.0,
+  "ths_ns": 0.0,
+  "tpws_ns": 0.0,
+  "no_clock_registers": 0,
+  "resources": {
+    "lut": {
+      "used": 3026.0,
+      "available": 53200.0,
+      "percent": 5.68796992481203
+    },
+    "ff": {
+      "used": 3854.0,
+      "available": 106400.0,
+      "percent": 3.6221804511278197
+    },
+    "bram36": {
+      "used": 3.0,
+      "available": 140.0,
+      "percent": 2.142857142857143
+    },
+    "dsp": {
+      "used": 0.0,
+      "available": 220.0,
+      "percent": 0.0
+    }
+  },
+  "drc": {
+    "Error": 0,
+    "Critical Warning": 0,
+    "Warning": 16,
+    "Advisory": 4
+  },
+  "scope": "Static timing/resource/DRC checks only; not hardware functional validation",
+  "source_sha256": {
+    "timing": "389ddaade3707c1ea9c67133d706c3c92694c2831b44ae914c2ed12aa8f5e99a",
+    "utilization": "5642448001c8172174b0ad861c6b722ec02325de931778c2124e0525c82bc59f",
+    "drc": "2aa099f2a30e56d86e46d2218f9efe68a7a5ed48b1dff909ed0e9a5425dbef66"
+  }
+}

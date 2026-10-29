@@ -1,0 +1,34 @@
+﻿
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Mon Oct 26 19:00:26 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mm_current/xsim_script.tcl
+# xsim {tb_mm_current} -testplusarg ROOT=../.. -testplusarg DATA_DIR=D:/fpga/pynq/transformer_submission/data/int8 -wdb {D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/raw/tb_mm_current.wdb} -autoloadwcfg -tclbatch {D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/scripts/run_wave.tcl}
+Time resolution is 1 ps
+source D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/scripts/run_wave.tcl
+## log_wave -r /
+## run all
+MM case 1 outputs=4 expected=4
+MM case 2 outputs=16 expected=16
+MM case 3 outputs=40 expected=40
+MM case 4 outputs=4 expected=4
+MM case 5 outputs=32 expected=32
+MM case 6 outputs=40 expected=40
+MM case 7 outputs=64 expected=64
+MM case 8 outputs=16 expected=16
+MM case 9 outputs=4 expected=4
+MM case 10 outputs=16 expected=16
+MM case 11 outputs=40 expected=40
+MM case 12 outputs=4 expected=4
+MM case 13 outputs=32 expected=32
+MM case 14 outputs=40 expected=40
+MM case 15 outputs=64 expected=64
+MM case 16 outputs=16 expected=16
+$finish called at time : 101180 ns : File "D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/sim/tb_mm_current.sv" Line 56
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 26 19:00:29 2026...

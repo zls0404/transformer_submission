@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "elements": 3840,
+  "failed_indices": [],
+  "nonfinite_indices": [],
+  "atol": 0.0,
+  "rtol": 0.0,
+  "mae": 0.0,
+  "rmse": 0.0,
+  "max_abs": 0.0,
+  "relative_l2": 0.0,
+  "relative_l2_defined": true,
+  "sources": {
+    "actual_sha256": "73fe7971fb5b850999e54c0dddb0efef39ac59e6ed90b2e58854494e72f3172f",
+    "reference_sha256": "73fe7971fb5b850999e54c0dddb0efef39ac59e6ed90b2e58854494e72f3172f"
+  }
+}

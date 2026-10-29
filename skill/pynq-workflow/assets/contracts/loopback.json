@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "name": "stream_loopback",
+  "target_part": "xc7z020clg400-1",
+  "artifacts": {
+    "bit": "loopback.bit",
+    "hwh": "loopback.hwh"
+  },
+  "buffers": {
+    "x": {
+      "shape": [
+        4
+      ],
+      "dtype": "uint32",
+      "direction": "input",
+      "file": "loopback_input.csv"
+    },
+    "y": {
+      "shape": [
+        4
+      ],
+      "dtype": "uint32",
+      "direction": "output"
+    }
+  },
+  "registers": {},
+  "steps": [
+    {
+      "kind": "dma",
+      "timeout_s": 1.0,
+      "transfers": [
+        {
+          "ip": "axi_dma",
+          "direction": "send",
+          "buffer": "x"
+        },
+        {
+          "ip": "axi_dma",
+          "direction": "recv",
+          "buffer": "y"
+        }
+      ]
+    }
+  ]
+}

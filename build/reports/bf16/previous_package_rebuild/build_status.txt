@@ -1,0 +1,7 @@
+part=xc7z020clg400-1
+project=bf16_z2
+vivado=2026.1
+max_slack_ns=0.023
+min_slack_ns=0.023
+drc_errors=0
+timing_ok=1

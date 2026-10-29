@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "name": "vector_add",
+  "target_part": "xc7z020clg400-1",
+  "artifacts": {
+    "bit": "vector_add.bit",
+    "hwh": "vector_add.hwh"
+  },
+  "buffers": {
+    "a": {
+      "shape": [
+        4
+      ],
+      "dtype": "uint32",
+      "direction": "input",
+      "file": "vector_a.csv"
+    },
+    "b": {
+      "shape": [
+        4
+      ],
+      "dtype": "uint32",
+      "direction": "input",
+      "file": "vector_b.csv"
+    },
+    "y": {
+      "shape": [
+        4
+      ],
+      "dtype": "uint32",
+      "direction": "output"
+    }
+  },
+  "registers": {},
+  "steps": [
+    {
+      "kind": "dma",
+      "timeout_s": 1.0,
+      "transfers": [
+        {
+          "ip": "dma_a",
+          "direction": "send",
+          "buffer": "a"
+        },
+        {
+          "ip": "dma_b",
+          "direction": "send",
+          "buffer": "b"
+        },
+        {
+          "ip": "dma_out",
+          "direction": "recv",
+          "buffer": "y"
+        }
+      ]
+    }
+  ]
+}

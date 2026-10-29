@@ -1,0 +1,42 @@
+[
+  {
+    "operator": "baseline",
+    "total": 100,
+    "check_basis": "framing only; accuracy not graded",
+    "passed": 100,
+    "failed": 0,
+    "elements": 14720
+  },
+  {
+    "operator": "serial",
+    "total": 100,
+    "check_basis": "bit equality and recorded protocol checks",
+    "passed": 94,
+    "failed": 6,
+    "elements": 14720
+  },
+  {
+    "operator": "parallel",
+    "total": 100,
+    "check_basis": "bit equality and recorded protocol checks",
+    "passed": 100,
+    "failed": 0,
+    "elements": 14720
+  },
+  {
+    "operator": "gelu",
+    "total": 15,
+    "check_basis": "bit equality and recorded protocol checks",
+    "passed": 15,
+    "failed": 0,
+    "elements": 3840
+  },
+  {
+    "operator": "gemm",
+    "total": 16,
+    "check_basis": "bit equality and recorded protocol checks",
+    "passed": 16,
+    "failed": 0,
+    "elements": 6912
+  }
+]

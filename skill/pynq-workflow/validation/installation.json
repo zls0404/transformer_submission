@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "source": "submission skill directory",
+  "installed_copy": "temporary explicit directory only",
+  "retains_validation_records": true,
+  "utf8_text_readable": true,
+  "existing_destination_refused": true,
+  "standard_entry_name": "SKILL.md",
+  "global_configuration_changed": false,
+  "format_validator": {
+    "passed": true,
+    "stdout": "Skill is valid!"
+  },
+  "scope": "Final installer and UTF-8 metadata check; no physical board execution"
+}

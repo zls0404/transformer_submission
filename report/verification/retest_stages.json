@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-26",
+  "stages": [
+    {
+      "stage": "int8_rtl",
+      "exit_code": 0,
+      "elapsed_s": 33.547
+    },
+    {
+      "stage": "bf16_integrated",
+      "exit_code": 0,
+      "elapsed_s": 882.891
+    },
+    {
+      "stage": "bf16_standalone",
+      "exit_code": 0,
+      "elapsed_s": 95.469
+    },
+    {
+      "stage": "bf16_analysis",
+      "exit_code": 0,
+      "elapsed_s": 28.89
+    },
+    {
+      "stage": "bf16_integrated_analysis",
+      "exit_code": 0,
+      "elapsed_s": 1.703
+    },
+    {
+      "stage": "int8_analysis_and_plots",
+      "exit_code": 1,
+      "elapsed_s": 0.235
+    },
+    {
+      "stage": "int8_analysis_and_plots_retry",
+      "exit_code": 0,
+      "elapsed_s": 8.234
+    },
+    {
+      "stage": "bf16_plots",
+      "exit_code": 0,
+      "elapsed_s": 17.25
+    },
+    {
+      "stage": "bf16_capture_figure_verification",
+      "exit_code": 0,
+      "elapsed_s": 1.125
+    },
+    {
+      "stage": "skill_unit_tests",
+      "exit_code": 0,
+      "elapsed_s": 0.828
+    },
+    {
+      "stage": "skill_application_reuse",
+      "exit_code": 0,
+      "elapsed_s": 0.25
+    }
+  ],
+  "final_stages_passed": true,
+  "resolved_environment_issue": "Initial plotting attempt lacked the declared Matplotlib dependency. Reused the local Matplotlib 3.10.8 package for the successful retry; dependencies not included in submission.",
+  "physical_board_execution": false,
+  "pass_scope": "Compilation/capture/analysis execution completed; numerical failures are reported separately."
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "application": "loopback",
+    "transaction_passed": true,
+    "comparison": {
+      "passed": true,
+      "elements": 4,
+      "failed_indices": [],
+      "nonfinite_indices": [],
+      "atol": 0,
+      "rtol": 0,
+      "mae": 0.0,
+      "rmse": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "relative_l2_defined": true
+    },
+    "execution_kind": "offline_mock",
+    "physical_board_access": false
+  },
+  {
+    "application": "vector_add",
+    "transaction_passed": true,
+    "comparison": {
+      "passed": true,
+      "elements": 4,
+      "failed_indices": [],
+      "nonfinite_indices": [],
+      "atol": 0,
+      "rtol": 0,
+      "mae": 0.0,
+      "rmse": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "relative_l2_defined": true
+    },
+    "execution_kind": "offline_mock",
+    "physical_board_access": false
+  }
+]

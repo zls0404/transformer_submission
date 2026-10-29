@@ -1,0 +1,2 @@
+CASES=100 SERIAL_DIFFERENT_OR_PROTOCOL=6 PARALLEL_DIFFERENT_OR_PROTOCOL=0
+Clock=10ns; input scale=6; output scale=7; original RTL unchanged.

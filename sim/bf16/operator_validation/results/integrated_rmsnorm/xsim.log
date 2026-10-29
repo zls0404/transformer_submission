@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# xsim v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Oct 26 18:09:03 2026
+# Process ID         : 158672
+# Current directory  : D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/build/runs/integrated_rmsnorm
+# Command line       : xsim.exe -log D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/results/integrated_rmsnorm/xsim.log -mode tcl -source {xsim.dir/integrated/xsim_script.tcl}
+# Log file           : D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/results/integrated_rmsnorm/xsim.log
+# Journal file       : D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/build/runs/integrated_rmsnorm\xsim.jou
+# Running On         : LAPTOP-Q97KBQQG
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 9 7945HX with Radeon Graphics        
+# CPU Frequency      : 2495 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 16844 MB
+# Swap memory        : 16106 MB
+# Total Virtual      : 32951 MB
+# Available Virtual  : 1588 MB
+#-----------------------------------------------------------
+source xsim.dir/integrated/xsim_script.tcl
+# xsim {integrated} -testplusarg OP=2 -testplusarg DATA_DIR=D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/data/integrated -testplusarg OUT_DIR=D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/results/integrated_rmsnorm -wdb {D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/results/integrated_rmsnorm/validation.wdb} -autoloadwcfg -tclbatch {D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/scripts/run_wave.tcl}
+Time resolution is 1 ps
+source D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/scripts/run_wave.tcl
+## foreach base {/tb_operator_validation /tb_integrated /tb_integrated_m4/run} {
+##  if {[llength [get_objects -quiet "$base/clk"]]>0} {
+##   foreach sig {clk rst_n op tc in_valid in_bf16 out_valid out_fp32 out_bf16 fifo1_fault fifo2_fault start aux_load a_data b_data a_valid b_valid a_ready b_ready a_loaded b_loaded aux_loaded busy done error out_data out_last out_ready mm_valid mm_fp32 mm_bf16} {
+##    set objects [get_objects -quiet "$base/$sig"]
+##    if {[llength $objects]>0} {log_wave $objects}
+##   }
+##  }
+## }
+## run all
+INTEGRATED_CAPTURE op=2 case=0 beats=192 TLAST=0 stable=0 faults=0/0 error=0
+INTEGRATED_CAPTURE op=2 case=1 beats=192 TLAST=0 stable=0 faults=0/0 error=0
+INTEGRATED_CAPTURE op=2 case=2 beats=192 TLAST=0 stable=0 faults=0/0 error=0
+INTEGRATED_CAPTURE op=2 case=3 beats=192 TLAST=0 stable=0 faults=0/0 error=0
+INTEGRATED_CAPTURE op=2 case=4 beats=192 TLAST=0 stable=0 faults=0/0 error=0
+INTEGRATED_CAPTURE op=2 case=5 beats=192 TLAST=0 stable=0 faults=0/0 error=0
+INTEGRATED_COMPLETED op=2 rows=1 cases=6
+$finish called at time : 1086730 ns : File "D:/fpga/pynq/transformer_submission/sim/bf16/operator_validation/sim/tb_integrated.sv" Line 108
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:36 . Memory (MB): peak = 237.832 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 107972 KB (Peak: 107972 KB), Simulation CPU Usage: 154312 ms
+INFO: [Common 17-206] Exiting xsim at Mon Oct 26 18:11:41 2026...

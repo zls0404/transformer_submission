@@ -1,0 +1,33 @@
+﻿
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Mon Oct 26 19:00:07 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_gelu_current/xsim_script.tcl
+# xsim {tb_gelu_current} -testplusarg ROOT=../.. -testplusarg DATA_DIR=D:/fpga/pynq/transformer_submission/data/int8 -wdb {D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/raw/tb_gelu_current.wdb} -autoloadwcfg -tclbatch {D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/scripts/run_wave.tcl}
+Time resolution is 1 ps
+source D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/scripts/run_wave.tcl
+## log_wave -r /
+## run all
+GELU scale=0 count=256 bad=0
+GELU scale=1 count=256 bad=0
+GELU scale=2 count=256 bad=0
+GELU scale=3 count=256 bad=0
+GELU scale=4 count=256 bad=0
+GELU scale=5 count=256 bad=0
+GELU scale=6 count=256 bad=0
+GELU scale=7 count=256 bad=0
+GELU scale=8 count=256 bad=0
+GELU scale=9 count=256 bad=0
+GELU scale=10 count=256 bad=0
+GELU scale=11 count=256 bad=0
+GELU scale=12 count=256 bad=0
+GELU scale=13 count=256 bad=0
+GELU scale=14 count=256 bad=0
+$finish called at time : 43950 ns : File "D:/fpga/pynq/transformer_submission/sim/int8/operator_validation/sim/tb_gelu_current.sv" Line 34
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 26 19:00:09 2026...

@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "references": [
+    {
+      "path": "data/int8/reference/softmax_reference.csv",
+      "rows": 14720,
+      "kind": "golden_reference",
+      "sha256": "32964582c7800d8470ba8cfdd0aae506c2f7020e09c9201b5a3bcfb43dfe0dde",
+      "sources": [
+        "data/int8/softmax_cases.json"
+      ]
+    },
+    {
+      "path": "data/int8/reference/gelu_reference.csv",
+      "rows": 3840,
+      "kind": "golden_reference",
+      "sha256": "a309f6e3ebd95b2eeb0f7616264d72e31fc34e62cad74a717750847d71bea79c",
+      "sources": [
+        "data/int8/gelu_cases.json"
+      ]
+    },
+    {
+      "path": "data/int8/reference/gemm_reference.csv",
+      "rows": 6912,
+      "kind": "golden_reference",
+      "sha256": "c40936ee9af1f612422cbeffad66761c42238f3ad831e0abbef09dd82a1100d1",
+      "sources": [
+        "data/int8/mm_reference.npz",
+        "data/int8/mm_cases.json"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/standalone_softmax.csv",
+      "rows": 19968,
+      "kind": "golden_reference",
+      "sha256": "fe1f0019423115967dd2424143ea0f54fbe68e1df1516b83dc7d369a41b4e38e",
+      "sources": [
+        "data/bf16/reference_data.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/standalone_layernorm.csv",
+      "rows": 19968,
+      "kind": "golden_reference",
+      "sha256": "55011632bce4e17e3cb9852406a75ee5686fec99a2a504842766e2624a2c232a",
+      "sources": [
+        "data/bf16/reference_data.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/standalone_rmsnorm.csv",
+      "rows": 19968,
+      "kind": "golden_reference",
+      "sha256": "f97084ef019717a1b0232bb0d8c67626f5a2d2613b20ff65a0289128d9b3b135",
+      "sources": [
+        "data/bf16/reference_data.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/standalone_silu.csv",
+      "rows": 19968,
+      "kind": "golden_reference",
+      "sha256": "4655600f4bc0459ceb62b96cc56f2233a420b07e1df22e9240126b751dbabbcb",
+      "sources": [
+        "data/bf16/reference_data.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/standalone_gelu.csv",
+      "rows": 19968,
+      "kind": "golden_reference",
+      "sha256": "d2db28bef0b94f146d24ff6805b6199461b8dca26668f47bc38091462898e9c6",
+      "sources": [
+        "data/bf16/reference_data.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_gemm.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "42e30320afda51a56397a841e1c0c576b7e303d5340ce159c920808918bddbbc",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_softmax.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "e8df7600a218c7785af2aca98ed3452284e121c720ac0e907d7ddac7fe4cf247",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_layernorm.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "1113614b68abbb58ee41b8673524b0fede4651c0864d6a61a332e66f1626b0e0",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_rmsnorm.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "bb2ed7481fa3e115d76781f7dee7674acd749fbdbc1f710251150d5cd4d82934",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_silu.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "e2d1356c6bd2b5f90925f0c29c669722e6a9edef9d7aebc216b7b8379bc75d99",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_gelu.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "d9a06f5d6bea956f1e5ec312f91f66a69e52a01f58f08092da274b73617e0116",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_layernorm_affine.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "317ec3f7396cb662c7a1dc95a10a0f84b6aa915bfd5bba715de74fa6935971e8",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_rmsnorm_affine.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "cb6781d4f38a37b9c2f6eae6e539a58b0659b9312e4bdf9a1405ccc0e979ab8d",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_masked_softmax.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "8d49c3ecaae8d745cb086c1a595b4cb21e0a36fbb6d160291632dc4dfd8dcfe4",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/bf16/reference/pipeline_swiglu.csv",
+      "rows": 18432,
+      "kind": "golden_reference",
+      "sha256": "e50bf5e111fa0ca5c0c05656cfb538757c340d10153c45b213a8d6e37f2fc14a",
+      "sources": [
+        "data/bf16/integrated/references.npz"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_0.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "cd12f562f10e82b0de3ce8e6f39bdace7ac0f099b3923d11386db9de7a63bd06",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_1.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "b166c65fb7e204fc746319fa1281c0574fc24c7858c370ba58656427ac6aa42c",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_2.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "227b7b13fbb14f34661eb9731fec5bd4d0a3c1734e04131b63f32251a4fcace6",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_3.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "693f5cb95e9d76aebc5bfa4583818553989cd764f202962b12ae88ebffc826bc",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_4.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "bcd0cac3811283cc02012e623c0a5d900d4418713d100cc93476a63de8d0c94a",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_7.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "6d32a7563d132d88a49d7dc33cb1d3f833844d17bd8cf91a984eb9e7bb3061f2",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_8.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "a1f8ec9cfc3889aa752e7cc7043deaa9b2fe02f1f07e9f8f3f6dd968faa434c4",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_9.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "5c60a2873acb630cb45c0e69a3e4f8cb660fde6f5d682a7c42244f1282ba8eed",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_10.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "1e973028d7bfca754edede0163336f8f91b36b1df6692ca6867312f336106092",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/expected_op_11.csv",
+      "rows": 3072,
+      "kind": "regenerated_board_software_reference",
+      "sha256": "baed1bd55faf2ff0bce65f06e45effaa9f2bccf03bf576dddeede5e9cbb0ff46",
+      "sources": [
+        "src/bf16/ps/bench_snake_report.py"
+      ]
+    },
+    {
+      "path": "data/board/bf16/bench_summary.csv",
+      "rows": 10,
+      "kind": "measured_summary_from_existing_board_log",
+      "sha256": "5132e5b38208c183acda379fe61a54212a528125d3e93e97aeec082e5ea4d9a4",
+      "sources": [
+        "board/bf16/results/bench_log.txt"
+      ]
+    }
+  ],
+  "images": "picture/index.html",
+  "actual_rtl_outputs": [
+    "sim/int8/operator_validation/raw",
+    "sim/bf16/operator_validation/results"
+  ],
+  "no_new_physical_board_test": true
+}

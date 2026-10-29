@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "passed": true,
+  "scope": "Final source delivery checks; no physical board execution",
+  "scripts_changed_after_independent_retest": [
+    "scripts/install_skill.py"
+  ],
+  "change": "Installer retains validation evidence; separately checked in installation.json",
+  "all_other_independently_tested_scripts_unchanged": true,
+  "scripts_sha256": {
+    "scripts/bind_contract.py": "d067543c176564feaacf6cfcccc44a518fe9a83744663ffb7e111bfb949eec2b",
+    "scripts/install_skill.py": "6bf4dec6546f01fa703c040770f7689ec9357e0aeb121309ce578bcfcaac5b23",
+    "scripts/make_demo.py": "b345e66f6482a0b46b27e74db33c333aa29e7101c041d2c6a15d1233024c9dfa",
+    "scripts/pynq_common.py": "b48d18aae973a1be9b761b6e6a260d6931b32e0c6a5a940f4c3543a3e2d50af6",
+    "scripts/pynq_tool.py": "a2b7302f111a57d805f06b0691c61d22b2d9d0f062c39d04e5e26fc9b11e3105",
+    "scripts/run_contract.py": "72daccbd5b38c2266d5cb337d2050bbebfc3f2fac89f6552fb6cbc45775c99ca",
+    "scripts/test_skill.py": "e9286451d16fac8dfdf0d7b116740a0628248e4e8e14c24c41866a8cf9bc3eee"
+  },
+  "utf8_text_checked": true,
+  "source_filenames_ascii_lowercase": true,
+  "no_cache_or_venv_included": true,
+  "global_skill_configuration_changed": false
+}

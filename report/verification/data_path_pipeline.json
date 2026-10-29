@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "rows": 768,
+  "relative_l2": 0.001536033024635351,
+  "case_id": 2,
+  "op": 11,
+  "input_directory": "data/bf16/integrated",
+  "all_three_hex_frames_consumed": true,
+  "scope": "One nonzero pipeline case after data relocation, not a new full regression or board test"
+}

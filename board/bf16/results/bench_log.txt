@@ -1,0 +1,240 @@
+======================================================================================
+project_4 / Snake accelerator: functional and latency report
+======================================================================================
+Board files : /home/xilinx/bf16_transformer/design_1.bit ; /home/xilinx/bf16_transformer/design_1.hwh
+Active GEMM : (4 x 4) @ (4 x 128) -> (4 x 128)
+HW workload : M=4, K=4, N=768; BF16; output 6144 bytes
+Padding     : B columns 128..767 are zero; hardware still processes all columns.
+Normalization uses all 768 columns; masked Softmax uses the valid mask.
+Benchmark   : 30 runs per operation; random seed 2026
+  op=0 -> GEMM + Snake Softmax
+  op=1 -> GEMM + Snake LayerNorm
+  op=2 -> GEMM + Snake RMSNorm
+  op=3 -> GEMM + Snake SiLU
+  op=4 -> GEMM + Snake sigmoid GELU
+  op=7 -> BF16 GEMM bypass
+  op=8 -> GEMM + LayerNorm affine
+  op=9 -> GEMM + RMSNorm affine
+  op=10 -> GEMM + masked Softmax
+  op=11 -> SwiGLU (two GEMMs)
+
+[1] Loading bitstream and discovering PL IP...
+  Discovered : snake_acc_axi_0, dma_a, dma_b, dma_out
+  Status     : {'raw': 0, 'busy': 0, 'done': 0, 'error': 0, 'A_loaded': 0, 'B_loaded': 0, 'aux_loaded': 0}
+
+[2] Input and transfer sizes
+  A: 16 BF16 = 32 bytes; B: 3072 BF16 = 6144 bytes
+  output: 768 x 64-bit beats = 6144 bytes
+  auxiliary: 5376 BF16 = 10752 bytes (gamma, beta, mask, W_up)
+  A first values: ['BE8D', '3E9A', '3DAC', 'BD17', 'BD67', '3EFA', '3F22', 'BE8E']
+  B first values: ['3CC6', 'BCFB', 'BD7A', 'BDB2', '3D81', '3C7D', '3E07', 'BE46']
+  A decoded BF16:
+ [[-0.27539062  0.30078125  0.08398438 -0.03686523]
+ [-0.05639648  0.48828125  0.6328125  -0.27734375]
+ [ 0.31640625 -0.12695312  0.70703125  0.6484375 ]
+ [ 0.29492188  0.44140625  0.14355469  0.53125   ]]
+  B active block (first 8 of 128 columns):
+ [[ 0.02416992 -0.03063965 -0.06103516 -0.08691406  0.06298828  0.01544189
+   0.13183594 -0.19335938]
+ [ 0.28125    -0.09179688 -0.14355469 -0.01611328 -0.14941406 -0.06640625
+   0.2578125  -0.04052734]
+ [ 0.29882812  0.16894531  0.015625    0.09570312 -0.1953125  -0.14550781
+  -0.03442383  0.00564575]
+ [-0.09082031 -0.07324219 -0.00230408 -0.18261719 -0.17285156  0.13085938
+  -0.04174805  0.16015625]]
+
+[3] Verify matrix multiplication and all Snake operations
+  Initial A/B load + GEMM + output DMA: 2064.04 us
+  GEMM max_abs=0 mean_abs=0 relative_L2=0
+  GEMM CPU active output (first 8 columns):
+ [[ 0.10644531 -0.00228882 -0.02502441  0.03393555 -0.07226562 -0.04125977
+   0.03979492  0.03564453]
+ [ 0.34960938  0.08398438 -0.05615234  0.10839844 -0.15234375 -0.16210938
+   0.10839844 -0.04980469]
+ [ 0.12451172  0.07373047  0.00848389 -0.07617188 -0.2109375  -0.00469971
+  -0.04248047  0.05175781]
+ [ 0.12597656 -0.06445312 -0.08056641 -0.11621094 -0.16699219  0.02392578
+   0.12597656  0.01098633]]
+  GEMM FPGA active output (first 8 columns):
+ [[ 0.10644531 -0.00228882 -0.02502441  0.03393555 -0.07226562 -0.04125977
+   0.03979492  0.03564453]
+ [ 0.34960938  0.08398438 -0.05615234  0.10839844 -0.15234375 -0.16210938
+   0.10839844 -0.04980469]
+ [ 0.12451172  0.07373047  0.00848389 -0.07617188 -0.2109375  -0.00469971
+  -0.04248047  0.05175781]
+ [ 0.12597656 -0.06445312 -0.08056641 -0.11621094 -0.16699219  0.02392578
+   0.12597656  0.01098633]]
+  GEMM check: PASS
+
+  op=0 GEMM + Snake Softmax
+    output range [0.0009994507, 0.001937866], mean 0.001301897, std 7.325257e-05
+    CPU-reference error: max_abs=7.62939e-06 mean_abs=3.2559e-06 relative_L2=0.00382235
+    Active 128-column error: max_abs=7.62939e-06 mean_abs=4.61936e-07 relative_L2=0.0013661
+    CPU row 0, first 8 active values : [0.00144958 0.001297   0.00126648 0.00134277 0.00121307 0.00125122
+ 0.0013504  0.0013504 ]
+    FPGA row 0, first 8 active values: [0.00144958 0.001297   0.00126648 0.00134277 0.00121307 0.00125122
+ 0.0013504  0.0013504 ]
+    Softmax row sums: ['0.9974365', '0.9992294', '1.0000610', '1.0027008']
+    Active columns' probability mass: [0.1673584  0.17403412 0.17974854 0.1775055 ]
+    Active probability mass need not equal 1; zero logits still contribute.
+    Numerical check (finite, full/active relative L2 <= 0.050): PASS
+
+  op=1 GEMM + Snake LayerNorm
+    output range [-5.15625, 6.75], mean -6.700555e-05, std 0.9960833
+    CPU-reference error: max_abs=0 mean_abs=0 relative_L2=0
+    Active 128-column error: max_abs=0 mean_abs=0 relative_L2=0
+    CPU row 0, first 8 active values : [ 4.8125     -0.13183594 -1.1640625   1.515625   -3.3125     -1.90625
+  1.78125     1.59375   ]
+    FPGA row 0, first 8 active values: [ 4.8125     -0.13183594 -1.1640625   1.515625   -3.3125     -1.90625
+  1.78125     1.59375   ]
+    Numerical check (finite, full/active relative L2 <= 0.050): PASS
+
+  op=2 GEMM + Snake RMSNorm
+    output range [-5.125, 6.8125], mean 0.1407896, std 0.9862054
+    CPU-reference error: max_abs=0 mean_abs=0 relative_L2=0
+    Active 128-column error: max_abs=0 mean_abs=0 relative_L2=0
+    CPU row 0, first 8 active values : [ 4.84375    -0.10400391 -1.140625    1.546875   -3.28125    -1.875
+  1.8125      1.6171875 ]
+    FPGA row 0, first 8 active values: [ 4.84375    -0.10400391 -1.140625    1.546875   -3.28125    -1.875
+  1.8125      1.6171875 ]
+    Numerical check (finite, full/active relative L2 <= 0.050): PASS
+
+  op=3 GEMM + Snake SiLU
+    output range [-0.1088867, 0.2490234], mean 0.004789995, std 0.02835124
+    CPU-reference error: max_abs=0.000488281 mean_abs=2.70208e-06 relative_L2=0.00108055
+    Active 128-column error: max_abs=0.000488281 mean_abs=1.62125e-05 relative_L2=0.00108055
+    CPU row 0, first 8 active values : [ 0.05615234 -0.00114441 -0.0123291   0.01721191 -0.03491211 -0.02026367
+  0.02026367  0.01818848]
+    FPGA row 0, first 8 active values: [ 0.0559082  -0.00114441 -0.0123291   0.01721191 -0.03491211 -0.0201416
+  0.02026367  0.01818848]
+    Numerical check (finite, full/active relative L2 <= 0.050): PASS
+
+  op=4 GEMM + Snake sigmoid GELU
+    output range [-0.09814453, 0.2773438], mean 0.005270696, std 0.02988216
+    CPU-reference error: max_abs=0.000976562 mean_abs=2.21779e-06 relative_L2=0.00124262
+    Active 128-column error: max_abs=0.000976562 mean_abs=1.33067e-05 relative_L2=0.00124262
+    CPU row 0, first 8 active values : [ 0.05810547 -0.00114441 -0.01226807  0.01745605 -0.03393555 -0.01989746
+  0.02062988  0.01831055]
+    FPGA row 0, first 8 active values: [ 0.05810547 -0.00114441 -0.01226807  0.01745605 -0.03393555 -0.01989746
+  0.02062988  0.01831055]
+    Extra comparison vs upstream tanh GELU: max_abs=0.00390625 mean_abs=7.02217e-05 relative_L2=0.0101117
+    Numerical check and CPU timing use the RTL sigmoid GELU definition.
+    Numerical check (finite, full/active relative L2 <= 0.050): PASS
+
+[4] Load extension parameters and verify ops 8-11
+  Loaded 5376 BF16 auxiliary words (10752 bytes) in 771.40 us
+  Masked Softmax valid columns: 102 of 768
+  op=8 GEMM + LayerNorm affine      max_abs=        0 mean_abs=        0 rel_L2= 0.00000 PASS
+    Active 128-column rel_L2=0; output range [-5.75, 8.25]
+  op=9 GEMM + RMSNorm affine        max_abs=        0 mean_abs=        0 rel_L2= 0.00000 PASS
+    Active 128-column rel_L2=0; output range [-5.71875, 8.3125]
+    masked_max_abs=0 row_sums=['0.9996338', '1.0005493', '0.9999695', '1.0003662']
+  op=10 GEMM + masked Softmax        max_abs=6.104e-05 mean_abs=2.285e-07 rel_L2= 0.00103 PASS
+    Active 128-column rel_L2=0.00102674; output range [0, 0.01287842]
+    Reference: two BF16 GEMMs, BF16 SiLU intermediate, then product
+  op=11 SwiGLU (two GEMMs)           max_abs=0.0001221 mean_abs=2.117e-07 rel_L2= 0.00075 PASS
+    Active 128-column rel_L2=0.000752157; output range [-0.03588867, 0.06445312]
+
+[5] Repeated-run latency statistics (30 samples, warmed up)
+  FPGA scope: receive-DMA submission + AXI-Lite start + PL computation +
+              output DMA/cache invalidation + completion/status checks.
+              Output clear/flush and A/B upload are excluded from these samples.
+  CPU scope : NumPy float32 GEMM + selected function + BF16 rounding on ARM.
+              CPU and FPGA both process the full padded (4, 4, 768) workload.
+              This is not a latency measurement of an unpadded 128-column core.
+  Note      : ops 0-4, 8-10 include one GEMM; op 11 includes two GEMMs.
+  Extension parameter DMA is reported separately, outside repeated samples.
+
+  op=7 BF16 GEMM bypass
+  FPGA end-to-end                    min   1107.16 | mean   1116.17 | max   1159.88 us
+                                     std      9.94 | p50    1113.07 | p95   1131.49 us
+  CPU full software pipeline         min   1617.19 | mean   1654.31 | max   1823.51 us
+                                     std     41.42 | p50    1637.01 | p95   1705.08 us
+  Mean latency ratio                    1.482x (CPU mean / FPGA mean)
+
+  op=0 GEMM + Snake Softmax
+  FPGA end-to-end                    min   1123.24 | mean   1145.43 | max   1218.25 us
+                                     std     22.30 | p50    1142.41 | p95   1180.96 us
+  CPU full software pipeline         min   3953.90 | mean   4536.22 | max   5751.27 us
+                                     std    644.72 | p50    4104.00 | p95   5575.31 us
+  Mean latency ratio                    3.960x (CPU mean / FPGA mean)
+
+  op=1 GEMM + Snake LayerNorm
+  FPGA end-to-end                    min   1118.67 | mean   1132.38 | max   1227.15 us
+                                     std     20.57 | p50    1125.39 | p95   1162.24 us
+  CPU full software pipeline         min   4109.98 | mean   4172.18 | max   4336.15 us
+                                     std     49.00 | p50    4150.15 | p95   4247.76 us
+  Mean latency ratio                    3.684x (CPU mean / FPGA mean)
+
+  op=2 GEMM + Snake RMSNorm
+  FPGA end-to-end                    min   1118.82 | mean   1133.67 | max   1187.15 us
+                                     std     18.51 | p50    1127.05 | p95   1184.38 us
+  CPU full software pipeline         min   3617.04 | mean   3671.53 | max   3821.12 us
+                                     std     43.77 | p50    3657.78 | p95   3736.38 us
+  Mean latency ratio                    3.239x (CPU mean / FPGA mean)
+
+  op=3 GEMM + Snake SiLU
+  FPGA end-to-end                    min   1111.71 | mean   1127.78 | max   1220.84 us
+                                     std     20.75 | p50    1122.24 | p95   1164.57 us
+  CPU full software pipeline         min   3595.66 | mean   3635.90 | max   3772.41 us
+                                     std     39.48 | p50    3616.09 | p95   3695.81 us
+  Mean latency ratio                    3.224x (CPU mean / FPGA mean)
+
+  op=4 GEMM + Snake sigmoid GELU
+  FPGA end-to-end                    min   1113.08 | mean   1123.62 | max   1157.98 us
+                                     std      9.26 | p50    1120.63 | p95   1137.18 us
+  CPU full software pipeline         min   3730.78 | mean   3779.94 | max   3939.91 us
+                                     std     47.30 | p50    3765.31 | p95   3864.21 us
+  Mean latency ratio                    3.364x (CPU mean / FPGA mean)
+
+  op=8 GEMM + LayerNorm affine
+  FPGA end-to-end                    min   1113.69 | mean   1130.99 | max   1218.67 us
+                                     std     23.27 | p50    1122.85 | p95   1181.23 us
+  CPU full software pipeline         min   4398.50 | mean   4676.46 | max   6096.98 us
+                                     std    545.40 | p50    4468.07 | p95   6093.58 us
+  Mean latency ratio                    4.135x (CPU mean / FPGA mean)
+
+  op=9 GEMM + RMSNorm affine
+  FPGA end-to-end                    min   1121.53 | mean   1211.84 | max   1530.30 us
+                                     std    129.44 | p50    1132.08 | p95   1478.91 us
+  CPU full software pipeline         min   3853.47 | mean   3944.08 | max   4081.36 us
+                                     std     58.60 | p50    3929.36 | p95   4058.07 us
+  Mean latency ratio                    3.255x (CPU mean / FPGA mean)
+
+  op=10 GEMM + masked Softmax
+  FPGA end-to-end                    min   1116.99 | mean   1143.97 | max   1186.64 us
+                                     std     23.79 | p50    1138.18 | p95   1178.25 us
+  CPU full software pipeline         min   3957.21 | mean   4015.18 | max   4093.69 us
+                                     std     38.99 | p50    4009.94 | p95   4070.19 us
+  Mean latency ratio                    3.510x (CPU mean / FPGA mean)
+
+  op=11 SwiGLU (two GEMMs)
+  FPGA end-to-end                    min   1685.74 | mean   1701.08 | max   1746.07 us
+                                     std     15.98 | p50    1695.29 | p95   1734.95 us
+  CPU full software pipeline         min   6701.73 | mean   6829.15 | max   8002.87 us
+                                     std    227.30 | p50    6777.59 | p95   6985.64 us
+  Mean latency ratio                    4.015x (CPU mean / FPGA mean)
+
+[6] Summary and interpretation
+  Operation                           Check  CPU mean/us FPGA mean/us   CPU/FPGA
+  BF16 GEMM bypass                     PASS      1654.31      1116.17     1.482x
+  GEMM + Snake Softmax                 PASS      4536.22      1145.43     3.960x
+  GEMM + Snake LayerNorm               PASS      4172.18      1132.38     3.684x
+  GEMM + Snake RMSNorm                 PASS      3671.53      1133.67     3.239x
+  GEMM + Snake SiLU                    PASS      3635.90      1127.78     3.224x
+  GEMM + Snake sigmoid GELU            PASS      3779.94      1123.62     3.364x
+  GEMM + LayerNorm affine              PASS      4676.46      1130.99     4.135x
+  GEMM + RMSNorm affine                PASS      3944.08      1211.84     3.255x
+  GEMM + masked Softmax                PASS      4015.18      1143.97     3.510x
+  SwiGLU (two GEMMs)                   PASS      6829.15      1701.08     4.015x
+  First-transfer latency (includes A/B DMA): 2064.04 us
+  Extension auxiliary-frame upload (one-time): 771.40 us
+  Repeated operation latencies exclude A/B upload, but include output DMA.
+  CPU comparison is software NumPy on the same ARM board, not desktop CPU.
+  Ratio > 1 means FPGA is faster; ratio < 1 means CPU is faster.
+  These are host-observed latencies, not isolated PL compute cycles.
+  Numerical relative-L2 limit 0.050 is this script's chosen acceptance limit.
+  The padded workload and Python/DMA overhead can favor the CPU at this size.
+  All operations completed; final status: {'raw': 56, 'busy': 0, 'done': 0, 'error': 0, 'A_loaded': 1, 'B_loaded': 1, 'aux_loaded': 1}
+  OVERALL: PASS
+======================================================================================

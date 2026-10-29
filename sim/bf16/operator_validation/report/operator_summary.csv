@@ -1,0 +1,6 @@
+﻿operator,nominal_cases,protocol_pass,numeric_pass,invariant_pass,all_checks_pass,nonfinite_cases,first_latency_cycles_min,first_latency_cycles_max,last_latency_cycles_min,last_latency_cycles_max,worst_R_Q_max_abs,worst_finite_R_Q_max_abs,worst_R_Q_relative_l2
+softmax,24,24,23,23,23,1,507,507,698,698,nan,6.103515625e-05,0.0014014447345221063
+layernorm,24,24,23,23,23,1,330,330,521,521,nan,0.0,0.0
+rmsnorm,24,24,23,23,23,1,317,317,508,508,nan,0.0,0.0
+silu,24,24,23,24,23,0,79,79,270,270,0.03125,0.03125,1.0
+gelu,24,24,23,24,23,0,79,79,270,270,0.015625,0.015625,1.0
